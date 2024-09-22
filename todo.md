@@ -1,0 +1,28 @@
+# Planning
+## Version 1
+- Static animal cards to be added;
+- Ability to edit cards;
+- Ability to search and filter animal cards;
+- Option to import and export/save GoSilas files.
+
+## Version 2
+- Ability to customize animals types;
+- Ability to make custom animal cards;
+- System preferences/options;
+
+## Version 3
+- GoSilas API;
+- Integration with other services to save data directly on servers.
+
+# TODO (Version 1)
+## Current tasks 
+- Add the initial page (card main menu)
+- Add a card UI
+- Add a "add card" menu
+- Add the option to edit cards
+- Add a UI Style
+
+## Doing
+- Finish the base UI from initial mock-up
+
+## Completed
