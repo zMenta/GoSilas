@@ -1,3 +1,19 @@
+# TODO (Version 1)
+## Current tasks 
+- Add the initial page (card main menu)
+- Add a card UI
+- Add a "add card" menu
+- Add the option to edit cards
+- Add a UI Style
+
+## Doing
+- Finish the base UI from initial mock-up
+
+## Completed
+- Basic UML | Flowchart [2024.09.23]
+- Basic UML | Class Diagram [2024.09.23]
+
+
 # Planning
 ## Version 1
 - Static animal cards to be added;
@@ -13,16 +29,3 @@
 ## Version 3
 - GoSilas API;
 - Integration with other services to save data directly on servers.
-
-# TODO (Version 1)
-## Current tasks 
-- Add the initial page (card main menu)
-- Add a card UI
-- Add a "add card" menu
-- Add the option to edit cards
-- Add a UI Style
-
-## Doing
-- Finish the base UI from initial mock-up
-
-## Completed
