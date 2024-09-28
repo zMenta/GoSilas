@@ -2,6 +2,7 @@
 ## Current tasks 
 - Add the initial page (card main menu)
 - Add a UI Style
+- Create the resource types for Adopters, Animals and Addresses
 
 ## Doing
 - Finish the base UI from initial mock-up
