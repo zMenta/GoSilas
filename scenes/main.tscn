@@ -1,0 +1,213 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt8c6mponrxif"]
+
+[ext_resource type="PackedScene" uid="uid://dk2ebyjp53c1" path="res://scenes/card.tscn" id="1_lddnq"]
+
+[node name="PanelContainer" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "File"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save"
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Animals"
+
+[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Adopters"
+
+[node name="Button6" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Addresses"
+
+[node name="Spacer2" type="Control" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="Button5" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Options"
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="MainWindow" type="ScrollContainer" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.0
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="card" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card2" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card3" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card4" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card5" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card6" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card7" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card8" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card9" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card10" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card11" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card12" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card13" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card14" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card15" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card16" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card17" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card18" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card19" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card20" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card21" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card22" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card23" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card24" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card25" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card26" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card27" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card28" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card29" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card30" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card31" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card32" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card33" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card34" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card35" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card36" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card37" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card38" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="card39" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/HFlowContainer" instance=ExtResource("1_lddnq")]
+layout_mode = 2
+
+[node name="SideWindow" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/SideWindow"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/SideWindow/VBoxContainer"]
+layout_mode = 2
+text = "Add animal"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/SideWindow/VBoxContainer"]
+layout_mode = 2
+text = "Filter"

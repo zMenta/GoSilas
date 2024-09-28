@@ -1,13 +1,14 @@
 # TODO (Version 1)
 ## Current tasks 
 - Add the initial page (card main menu)
-- Add a card UI
 - Add a "add card" menu
 - Add the option to edit cards
 - Add a UI Style
+- Add a card UI (complete card)
 
 ## Doing
 - Finish the base UI from initial mock-up
+- Add a card UI (minimal card)
 
 ## Completed
 - Basic UML | Flowchart [2024.09.23]
