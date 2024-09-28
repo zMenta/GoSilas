@@ -40,3 +40,10 @@ theme_override_font_sizes/font_size = 11
 text = "Text text text text"
 horizontal_alignment = 1
 clip_text = true
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Text text text text"
+horizontal_alignment = 1
+clip_text = true
