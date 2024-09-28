@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dt8c6mponrxif"]
+[gd_scene load_steps=4 format=3 uid="uid://dt8c6mponrxif"]
 
 [ext_resource type="PackedScene" uid="uid://dk2ebyjp53c1" path="res://scenes/card.tscn" id="1_lddnq"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_sb6f2"]
+[ext_resource type="PackedScene" uid="uid://ctsprter837vf" path="res://scenes/card_details.tscn" id="2_lw0p6"]
 
 [node name="Main" type="PanelContainer"]
 anchors_preset = 15
@@ -68,84 +69,92 @@ text = "Options"
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/VBoxContainer/PanelContainer"]
+[node name="HSplitContainer2" type="HSplitContainer" parent="MarginContainer/VBoxContainer/PanelContainer"]
 layout_mode = 2
 
-[node name="MainWindow" type="ScrollContainer" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer"]
+[node name="CardDetails" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2" instance=ExtResource("2_lw0p6")]
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="MainWindow" type="ScrollContainer" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 6.0
 
-[node name="CardContainer" type="HFlowContainer" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow"]
+[node name="CardContainer" type="HFlowContainer" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="card" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card2" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card2" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card3" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card3" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card4" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card4" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card5" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card5" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card6" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card6" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card7" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card7" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card8" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card8" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card9" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card9" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card10" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card10" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card11" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card11" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card12" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card12" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card13" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card13" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card14" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card14" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card15" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card15" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card16" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card16" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card17" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
+[node name="card17" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="SideWindow" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer"]
+[node name="SideWindow" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/SideWindow"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/SideWindow"]
 layout_mode = 2
 
-[node name="AddButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/SideWindow/VBoxContainer"]
+[node name="AddButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/SideWindow/VBoxContainer"]
 layout_mode = 2
 text = "Add animal"
 
-[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/SideWindow/VBoxContainer"]
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/SideWindow/VBoxContainer"]
 layout_mode = 2
 text = "Filter"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer/SideWindow/VBoxContainer/AddButton" to="." method="_on_add_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/HSplitContainer2/HSplitContainer/SideWindow/VBoxContainer/AddButton" to="." method="_on_add_button_pressed"]
