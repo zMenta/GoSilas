@@ -2,12 +2,12 @@ extends Resource
 class_name Animal
 
 var id: int
-var adopter_id: int = 0
-var address_id: int = 0
+@export var adopter_id: int = 0
+@export var address_id: int = 0
 
-var image: ImageTexture
-var is_castrated: bool
-enum Sex {Male, Female}
-enum Size {SMALL, MEDIUM, BIG, EXTRA_BIG}
-enum Character {FRIENDLY, AGRESSIVE}
-var health_state: String
+@export var image: Texture2D
+@export var is_castrated: bool
+@export_enum("Male", "Female") var Sex: int
+@export_enum("Small", "Medium", "Big", "Extra_Big") var Size: int
+@export_enum("Friendly", "Agressive") var Character: int
+@export var health_state: String
