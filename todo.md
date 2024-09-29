@@ -2,12 +2,11 @@
 ## Current tasks 
 - Add the initial page (card main menu)
 - Add a UI Style
-- Create the resource types for Adopters, Animals and Addresses
 
 ## Doing
 - Finish the base UI from initial mock-up
-- Add a card UI (complete card)
 - Add a "add card" menu (edit, add, etc abilities)
+- Create the resource types for Adopters, Animals and Addresses
 
 ## Completed
 - Basic UML | Flowchart [2024.09.23]
@@ -26,6 +25,7 @@
 - Ability to customize animals types;
 - Ability to make custom animal cards;
 - System preferences/options;
+- Add localization (English and Brazilian Portuguese)
 
 ## Version 3
 - GoSilas API;
