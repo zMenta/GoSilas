@@ -1,4 +1,5 @@
 extends Resource
+class_name Adopter
 
 var id: int
 var address_id: int = 0

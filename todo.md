@@ -6,12 +6,12 @@
 ## Doing
 - Finish the base UI from initial mock-up
 - Add a "add card" menu (edit, add, etc abilities)
-- Create the resource types for Adopters, Animals and Addresses
 
 ## Completed
 - Basic UML | Flowchart [2024.09.23]
 - Basic UML | Class Diagram [2024.09.23]
 - Add a card UI (minimal card) [2024.09.28]
+- Create the resource types for Adopters, Animals and Addresses [2024.09.29]
 
 
 # Planning

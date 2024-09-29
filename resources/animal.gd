@@ -1,4 +1,5 @@
 extends Resource
+class_name Animal
 
 var id: int
 var adopter_id: int = 0
