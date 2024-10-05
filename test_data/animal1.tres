@@ -6,8 +6,8 @@
 [resource]
 script = ExtResource("1_qkm4l")
 image = ExtResource("1_dcxuy")
-is_castrated = true
-Sex = 1
+is_castrated = false
+Sex = 0
 Size = 2
 Character = 1
 health_state = "In good health"

@@ -21,3 +21,13 @@ func _on_card_details_closed_button_pressed() -> void:
 		main_split_container.dragger_visibility = main_split_container.DraggerVisibility.DRAGGER_VISIBLE
 	else:
 		main_split_container.dragger_visibility = main_split_container.DraggerVisibility.DRAGGER_HIDDEN_COLLAPSED
+
+# func _ready() -> void:
+# 	Storage.data = SaveFile.new()
+# 	for i in range(200000):
+# 		var adop = Adopter.new()
+# 		var animal = Animal.new()
+# 		animal.is_castrated = false
+# 		animal.Sex = 2
+# 		animal.adopter = adop
+# 		Storage.data.animals.append(animal)
