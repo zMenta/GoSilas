@@ -1,7 +1,7 @@
 # TODO (Version 1)
 ## Current tasks 
-- Add the initial page (card main menu)
 - Add a UI Style
+- On Animal resource, add a limit to health string lenght
 
 ## Doing
 - Finish the base UI from initial mock-up

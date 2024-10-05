@@ -42,151 +42,99 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 5
 columns = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="Padding" type="Control" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Padding2" type="Control" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="IsCastratedLabel" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Param"
-horizontal_alignment = 1
+text = "Is Castrated:"
+horizontal_alignment = 2
 clip_text = true
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="IsCastratedCheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+disabled = true
+button_pressed = true
+
+[node name="SexLabel" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Value"
-horizontal_alignment = 1
+text = "Sex:"
+horizontal_alignment = 2
 clip_text = true
 
-[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="SexValue" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Param"
-horizontal_alignment = 1
+text = "Female"
 clip_text = true
 
-[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="SizeLabe" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Value"
-horizontal_alignment = 1
+text = "Size:"
+horizontal_alignment = 2
 clip_text = true
 
-[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="SizeValue" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 11
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Param"
-horizontal_alignment = 1
+text = "Big"
 clip_text = true
 
-[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="CharacterLabel" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Value"
-horizontal_alignment = 1
+text = "Character:"
+horizontal_alignment = 2
 clip_text = true
 
-[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="CharacterValue" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 11
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Param"
-horizontal_alignment = 1
+text = "Friendly"
 clip_text = true
 
-[node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="HealthLabel" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Value"
-horizontal_alignment = 1
+text = "Health:"
+horizontal_alignment = 2
 clip_text = true
 
-[node name="Label9" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="HealthValue" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 11
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Param"
-horizontal_alignment = 1
-clip_text = true
-
-[node name="Label10" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 11
-text = "Value"
-horizontal_alignment = 1
-clip_text = true
-
-[node name="Label11" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 11
-text = "Param"
-horizontal_alignment = 1
-clip_text = true
-
-[node name="Label12" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 11
-text = "Value"
-horizontal_alignment = 1
-clip_text = true
-
-[node name="Label13" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 11
-text = "Param"
-horizontal_alignment = 1
-clip_text = true
-
-[node name="Label14" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 11
-text = "Value"
-horizontal_alignment = 1
-clip_text = true
-
-[node name="Label15" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 11
-text = "Param"
-horizontal_alignment = 1
-clip_text = true
-
-[node name="Label16" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 11
-text = "Value"
-horizontal_alignment = 1
-clip_text = true
+text = "Health status Health status Health status Health status"
+autowrap_mode = 3
 
 [node name="Button4" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

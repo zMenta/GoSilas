@@ -5,11 +5,9 @@
 
 [resource]
 script = ExtResource("1_qkm4l")
-adopter_id = 0
-address_id = 1
 image = ExtResource("1_dcxuy")
 is_castrated = true
 Sex = 1
 Size = 2
 Character = 1
-health_state = ""
+health_state = "In good health"

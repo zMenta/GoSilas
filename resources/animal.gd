@@ -1,9 +1,8 @@
 extends Resource
 class_name Animal
 
-var id: int
-@export var adopter_id: int = 0
-@export var address_id: int = 0
+@export var adopter: Adopter
+@export var address: Address
 
 @export var image: Texture2D
 @export var is_castrated: bool
