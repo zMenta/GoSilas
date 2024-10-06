@@ -2,9 +2,9 @@
 ## Current tasks 
 - Add a UI Style
 - On Animal resource, add a limit to health string lenght
+- Create a UI to select available adopters/addresses/animals (card creation or edit)
 
 ## Doing
-- Finish the base UI from initial mock-up
 - Add a "add card" menu (edit, add, etc abilities)
 
 ## Completed
@@ -12,6 +12,7 @@
 - Basic UML | Class Diagram [2024.09.23]
 - Add a card UI (minimal card) [2024.09.28]
 - Create the resource types for Adopters, Animals and Addresses [2024.09.29]
+- Finish the base UI from initial mock-up [2024.10.6]
 
 
 # Planning
