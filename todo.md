@@ -3,6 +3,7 @@
 - Add a UI Style
 - On Animal resource, add a limit to health string lenght
 - Create a UI to select available adopters/addresses/animals (card creation or edit)
+- Add image compression (limit to a value) on image uploads
 
 ## Doing
 - Add a "add card" menu (edit, add, etc abilities)
