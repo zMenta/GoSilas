@@ -29,6 +29,7 @@
 - Ability to make custom animal cards;
 - System preferences/options;
 - Add localization (English and Brazilian Portuguese)
+- Add backup files (in case the system crashes without saving changes)
 
 ## Version 3
 - GoSilas API;

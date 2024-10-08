@@ -32,9 +32,17 @@ func _set_values() -> void:
 	# Display container
 	name_value.text = data.name
 	is_castrated_checkbox.button_pressed = data.is_castrated
-	sex_value.text = str(data.Sex)
-	character_value.text = str(data.Character)
-	size_value.text = str(data.Size)
+	match data.Sex:
+		0: sex_value.text = "Male"
+		1: sex_value.text = "Female"
+	match data.Character:
+		0: character_value.text = "Friendly"
+		1: character_value.text = "Agressive"
+	match data.Size:
+		0: size_value.text = "Small"
+		1: size_value.text = "Medium"
+		2: size_value.text = "Big"
+		3: size_value.text = "Extra Big"
 	health_value.text = data.health_state
 	# Edit container
 	edit_name_value.text = data.name
