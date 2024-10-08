@@ -66,11 +66,17 @@ func _on_close_button_pressed() -> void:
 
 func _on_save_button_pressed() -> void:
 	_show_display_menu()
-	# Save contents to respective resource
+	data.name = edit_name_value.text
+	data.is_castrated = edit_is_castrated_check_box.button_pressed
+	data.Sex = edit_sex_option.selected
+	data.Character = edit_character_option.selected
+	data.Size = edit_size_option.selected
+	data.health_state = edit_health_value.text
+	_set_values()
 
 func _on_cancel_button_pressed() -> void:
 	_show_display_menu()
-	# cancels
+	_set_values()
 
 func _on_edit_button_pressed() -> void:
 	_show_edit_menu()
