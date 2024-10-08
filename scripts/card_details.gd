@@ -7,11 +7,19 @@ signal closed_button_pressed
 @onready var cancel_button: Button = %CancelButton
 @onready var edit_container: GridContainer = %EditContainer
 @onready var display_container: GridContainer = %DisplayContainer
+@onready var name_label: Label = %NameLabel
+@onready var name_value: Label = %NameValue
 @onready var is_castrated_checkbox: CheckBox = %IsCastratedCheckBox
 @onready var sex_value: Label = %SexValue
 @onready var size_value: Label = %SizeValue
 @onready var character_value: Label = %CharacterValue
 @onready var health_value: Label = %HealthValue
+@onready var edit_is_castrated_check_box: CheckBox = %EditIsCastratedCheckBox
+@onready var edit_sex_option: OptionButton = %EditSexOption
+@onready var edit_size_option: OptionButton = %EditSizeOption
+@onready var edit_character_option: OptionButton = %EditCharacterOption
+@onready var edit_health_value: LineEdit = %EditHealthValue
+@onready var edit_name_value: LineEdit = %EditNameValue
 
 @export var data: Animal :
 	set(new_data):
@@ -19,11 +27,23 @@ signal closed_button_pressed
 		if data != null:
 			_set_values.call_deferred()
 
+
 func _set_values() -> void:
+	# Display container
+	name_value.text = data.name
 	is_castrated_checkbox.button_pressed = data.is_castrated
 	sex_value.text = str(data.Sex)
 	character_value.text = str(data.Character)
+	size_value.text = str(data.Size)
 	health_value.text = data.health_state
+	# Edit container
+	edit_name_value.text = data.name
+	edit_is_castrated_check_box.button_pressed = data.is_castrated
+	edit_sex_option.selected = data.Sex
+	edit_character_option.selected = data.Character
+	edit_size_option.selected = data.Size
+	edit_health_value.text = data.health_state
+
 
 func _show_edit_menu() -> void:
 	display_container.hide()
@@ -31,6 +51,7 @@ func _show_edit_menu() -> void:
 	save_button.show()
 	cancel_button.show()
 	edit_button.hide()
+
 
 func _show_display_menu() -> void:
 	edit_container.hide()

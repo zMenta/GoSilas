@@ -4,6 +4,7 @@ class_name Animal
 @export var adopter: Adopter
 @export var address: Address
 
+@export var name: String
 @export var image: Texture2D
 @export var is_castrated: bool
 @export_enum("Male", "Female") var Sex: int

@@ -56,6 +56,24 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 15)
 layout_mode = 2
 
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Name:"
+horizontal_alignment = 2
+clip_text = true
+
+[node name="NameValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "NameName"
+clip_text = true
+
 [node name="IsCastratedLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -166,6 +184,23 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 15)
 layout_mode = 2
 
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Name:"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="EditNameValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Name"
+max_length = 64
+
 [node name="IsCastratedLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
@@ -174,7 +209,8 @@ text = "Is Castrated:"
 horizontal_alignment = 1
 clip_text = true
 
-[node name="IsCastratedCheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="EditIsCastratedCheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -188,7 +224,8 @@ text = "Sex:"
 horizontal_alignment = 1
 clip_text = true
 
-[node name="EditSexValue" type="OptionButton" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="EditSexOption" type="OptionButton" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -207,7 +244,8 @@ text = "Size:"
 horizontal_alignment = 1
 clip_text = true
 
-[node name="EditSizeValue" type="OptionButton" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="EditSizeOption" type="OptionButton" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -230,7 +268,8 @@ text = "Character:"
 horizontal_alignment = 1
 clip_text = true
 
-[node name="EditCharacterLabel" type="OptionButton" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="EditCharacterOption" type="OptionButton" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -250,6 +289,7 @@ horizontal_alignment = 1
 clip_text = true
 
 [node name="EditHealthValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -258,10 +298,6 @@ max_length = 64
 
 [node name="padding" type="Control" parent="MarginContainer/VBoxContainer/EditContainer"]
 layout_mode = 2
-
-[node name="WordCountLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
-layout_mode = 2
-text = "(0/64)"
 
 [node name="SaveButton" type="Button" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true

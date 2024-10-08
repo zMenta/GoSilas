@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_qkm4l")
+name = "Bob"
 image = ExtResource("1_dcxuy")
 is_castrated = false
 Sex = 0
