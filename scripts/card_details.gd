@@ -20,6 +20,7 @@ signal closed_button_pressed
 @onready var edit_character_option: OptionButton = %EditCharacterOption
 @onready var edit_health_value: LineEdit = %EditHealthValue
 @onready var edit_name_value: LineEdit = %EditNameValue
+@onready var edit_image_button : Button = %EditImageButton
 
 @export var data: Animal :
 	set(new_data):
@@ -59,6 +60,7 @@ func _show_edit_menu() -> void:
 	save_button.show()
 	cancel_button.show()
 	edit_button.hide()
+	edit_image_button.show()
 
 
 func _show_display_menu() -> void:
@@ -67,6 +69,7 @@ func _show_display_menu() -> void:
 	edit_button.show()
 	cancel_button.hide()
 	save_button.hide()
+	edit_image_button.hide()
 
 
 func _on_close_button_pressed() -> void:
