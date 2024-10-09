@@ -1,12 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://dk2ebyjp53c1"]
+[gd_scene load_steps=4 format=3 uid="uid://dk2ebyjp53c1"]
 
 [ext_resource type="Texture2D" uid="uid://c70kgdtiq3sru" path="res://test_data/dog.jpg" id="1_8s0ig"]
+[ext_resource type="Script" path="res://scripts/card.gd" id="1_du6u7"]
+[ext_resource type="Resource" uid="uid://c124npf5gltp1" path="res://test_data/animal1.tres" id="2_b26m1"]
 
 [node name="card" type="PanelContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(120, 150)
 offset_right = 45.0
 offset_bottom = 109.0
+script = ExtResource("1_du6u7")
+data = ExtResource("2_b26m1")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -27,23 +31,26 @@ texture = ExtResource("1_8s0ig")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
-text = "Text text text text"
+text = "Name"
 horizontal_alignment = 1
 clip_text = true
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="SexLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
-text = "Text text text text"
+text = "Sex"
 horizontal_alignment = 1
 clip_text = true
 
-[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="SizeLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
-text = "Text text text text"
+text = "Size"
 horizontal_alignment = 1
 clip_text = true
