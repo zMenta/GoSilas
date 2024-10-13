@@ -122,43 +122,7 @@ layout_mode = 2
 [node name="card4" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card5" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
-[node name="card6" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
-[node name="card7" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
-[node name="card8" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
-[node name="card9" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
-[node name="card10" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
-[node name="card11" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
-[node name="card12" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
 [node name="card13" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
-[node name="card14" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
-[node name="card15" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
-[node name="card16" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
-[node name="card17" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
 [node name="RightContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer"]
@@ -185,5 +149,6 @@ visible = false
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Header/Button7" to="." method="_on_button_7_pressed"]
 [connection signal="closed_button_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" to="." method="_on_card_details_closed_button_pressed"]
+[connection signal="animal_created" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" to="." method="_on_create_card_animal_created"]
 [connection signal="create_card_cancel_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" to="." method="_on_create_card_create_card_cancel_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer/AddButton" to="." method="_on_add_button_pressed"]

@@ -14,9 +14,6 @@ func _on_add_button_pressed() -> void:
 		child.hide()
 	create_card.show()
 	left_container.show()
-	
-	# var card := CARD.instantiate()
-	# card_container.add_child(card)
 
 # Debug button
 func _on_button_7_pressed() -> void:
@@ -35,3 +32,8 @@ func _on_create_card_create_card_cancel_pressed() -> void:
 	for child:Control in left_container.get_children():
 		child.hide()
 	left_container.hide()
+
+func _on_create_card_animal_created(animal: Animal) -> void:
+	var card := CARD.instantiate()
+	card.data = animal
+	card_container.add_child(card)
