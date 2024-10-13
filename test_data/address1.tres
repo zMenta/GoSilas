@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Address" load_steps=2 format=3 uid="uid://b0s3hq2523an6"]
+
+[ext_resource type="Script" path="res://resources/address.gd" id="1_q0gkw"]
+
+[resource]
+script = ExtResource("1_q0gkw")
+state = "RS"
+city = "Torres"
+street_name = "rua"
+street_number = 542

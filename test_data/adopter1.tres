@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Adopter" load_steps=3 format=3 uid="uid://dqyjujvabmtdi"]
+
+[ext_resource type="Script" path="res://resources/animal.gd" id="1_2v60k"]
+[ext_resource type="Script" path="res://resources/adopter.gd" id="2_wxhns"]
+
+[resource]
+script = ExtResource("2_wxhns")
+adopted_animals = Array[ExtResource("1_2v60k")]([])
+name = "Pablo"
+cpf = "020635435030"
+telephone_number = "99999999"
+observations = "Cool dude"

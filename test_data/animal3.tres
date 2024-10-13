@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Animal" load_steps=3 format=3 uid="uid://b8xqtw6woq63s"]
+
+[ext_resource type="Texture2D" uid="uid://c70kgdtiq3sru" path="res://test_data/dog.jpg" id="1_isefl"]
+[ext_resource type="Script" path="res://resources/animal.gd" id="2_nh3vn"]
+
+[resource]
+script = ExtResource("2_nh3vn")
+name = "Benny"
+image = ExtResource("1_isefl")
+is_castrated = true
+Sex = 0
+Size = 3
+Character = 0
+health_state = "Bad :("

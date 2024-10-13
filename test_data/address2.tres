@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Address" load_steps=2 format=3 uid="uid://dr0x5puoik5dp"]
+
+[ext_resource type="Script" path="res://resources/address.gd" id="1_jyrgd"]
+
+[resource]
+script = ExtResource("1_jyrgd")
+state = "RS"
+city = "Porto"
+street_name = "rua rio"
+street_number = 101
