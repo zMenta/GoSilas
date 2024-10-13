@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Storage="*res://autoloaders/storage.gd"
+GlobalSignals="*res://autoloaders/global_signals.gd"
 
 [display]
 

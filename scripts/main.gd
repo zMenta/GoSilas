@@ -9,31 +9,45 @@ extends PanelContainer
 
 const CARD: PackedScene = preload("res://scenes/card.tscn")
 
+func _ready() -> void:
+	GlobalSignals.card_pressed.connect(_on_card_pressed)
+
 func _on_add_button_pressed() -> void:
 	for child:Control in left_container.get_children():
 		child.hide()
 	create_card.show()
 	left_container.show()
+	_check_dragger_visibility()
 
-# Debug button
-func _on_button_7_pressed() -> void:
-	_on_card_details_closed_button_pressed()
-	# resource_picker.popup()
-
-func _on_card_details_closed_button_pressed() -> void:
+func show_card_details() -> void:
+	for child:Control in left_container.get_children():
+		child.hide()
 	details_card.show()
-	left_container.visible = !left_container.visible
+	left_container.show()
+	_check_dragger_visibility()
+
+func _check_dragger_visibility() -> void:
 	if left_container.visible == true:
 		main_split_container.dragger_visibility = main_split_container.DraggerVisibility.DRAGGER_VISIBLE
 	else:
 		main_split_container.dragger_visibility = main_split_container.DraggerVisibility.DRAGGER_HIDDEN_COLLAPSED
 
+func _on_card_details_closed_button_pressed() -> void:
+	details_card.show()
+	left_container.visible = !left_container.visible
+	_check_dragger_visibility()
+
 func _on_create_card_create_card_cancel_pressed() -> void:
 	for child:Control in left_container.get_children():
 		child.hide()
 	left_container.hide()
+	_check_dragger_visibility()
 
 func _on_create_card_animal_created(animal: Animal) -> void:
 	var card := CARD.instantiate()
 	card.data = animal
 	card_container.add_child(card)
+
+func _on_card_pressed(data: Resource) -> void:
+	show_card_details()
+	details_card.data = data

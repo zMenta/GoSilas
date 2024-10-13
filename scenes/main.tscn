@@ -37,11 +37,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "Save"
 
-[node name="Button7" type="Button" parent="MarginContainer/VBoxContainer/Header"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Show Card"
-
 [node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -113,18 +108,6 @@ size_flags_vertical = 3
 [node name="card" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
 layout_mode = 2
 
-[node name="card2" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
-[node name="card3" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
-[node name="card4" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
-[node name="card13" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
 [node name="RightContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -147,7 +130,6 @@ layout_mode = 2
 unique_name_in_owner = true
 visible = false
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Header/Button7" to="." method="_on_button_7_pressed"]
 [connection signal="closed_button_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" to="." method="_on_card_details_closed_button_pressed"]
 [connection signal="animal_created" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" to="." method="_on_create_card_animal_created"]
 [connection signal="create_card_cancel_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" to="." method="_on_create_card_create_card_cancel_pressed"]
