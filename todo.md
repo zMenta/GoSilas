@@ -1,11 +1,12 @@
 # TODO (Version 1)
 ## Current tasks 
 - Add a UI Style
-- On Animal resource, add a limit to health string lenght
+- On Animal resource, add a limit to health string length
 - Create a UI to select available adopters/addresses/animals (card creation or edit)
 - Add image compression (limit to a value) on image uploads
 - Add ability to upload images from computer file system
 - Add the ability to filter the content
+- Add the ability to delete resources (animals, adopters and addresses)
 
 ## Doing
 - Add the menus for adopters and addresses
