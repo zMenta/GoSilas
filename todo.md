@@ -5,9 +5,10 @@
 - Create a UI to select available adopters/addresses/animals (card creation or edit)
 - Add image compression (limit to a value) on image uploads
 - Add ability to upload images from computer file system
+- Add the ability to filter the content
 
 ## Doing
-- Add a "add card" menu (edit, add, etc abilities)
+- Add the menus for adopters and addresses
 
 ## Completed
 - Basic UML | Flowchart [2024.09.23]
@@ -15,6 +16,7 @@
 - Add a card UI (minimal card) [2024.09.28]
 - Create the resource types for Adopters, Animals and Addresses [2024.09.29]
 - Finish the base UI from initial mock-up [2024.10.6]
+- Add a "add card" menu (edit, add, etc abilities) [2024.10.13]
 
 
 # Planning
