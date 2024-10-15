@@ -25,6 +25,15 @@ func _set_values() -> void:
 			1: size_label.text = "Medium"
 			2: size_label.text = "Big"
 			3: size_label.text = "Extra Big"
+	elif data is Adopter:
+		name_label.text = data.name
+		sex_label.text = data.telephone_number
+		size_label.text = ""
+	elif data is Address:
+		name_label.text = data.city
+		sex_label.text = data.street_name
+		size_label.text = str(data.street_number)
+
 
 
 func _input(event: InputEvent) -> void:

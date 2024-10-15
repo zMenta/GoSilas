@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/card.gd" id="1_du6u7"]
 [ext_resource type="Resource" uid="uid://c124npf5gltp1" path="res://test_data/animal1.tres" id="2_b26m1"]
 
-[node name="card" type="PanelContainer"]
+[node name="Card" type="PanelContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(120, 150)
 offset_right = 45.0

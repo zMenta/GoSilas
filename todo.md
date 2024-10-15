@@ -7,6 +7,7 @@
 - Add ability to upload images from computer file system
 - Add the ability to filter the content
 - Add the ability to delete resources (animals, adopters and addresses)
+- Add pages for the UI
 
 ## Doing
 - Add the menus for adopters and addresses
