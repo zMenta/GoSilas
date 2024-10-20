@@ -1,0 +1,333 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctsprter837vf"]
+
+[ext_resource type="Script" path="res://scripts/card_details.gd" id="1_a2k7q"]
+[ext_resource type="Resource" uid="uid://c124npf5gltp1" path="res://test_data/animal1.tres" id="2_fto7c"]
+[ext_resource type="Texture2D" uid="uid://c70kgdtiq3sru" path="res://test_data/dog.jpg" id="3_rr0x2"]
+
+[node name="CardDetails" type="PanelContainer"]
+offset_left = 17.0
+offset_top = 25.0
+offset_right = 366.0
+offset_bottom = 621.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_a2k7q")
+data = ExtResource("2_fto7c")
+metadata/_edit_vertical_guides_ = [98.0]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CloseButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Close"
+
+[node name="ImageRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_rr0x2")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="EditImageButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Upload Image"
+
+[node name="DisplayContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="Padding" type="Control" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Padding2" type="Control" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Name:"
+horizontal_alignment = 2
+clip_text = true
+
+[node name="NameValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "NameName"
+clip_text = true
+
+[node name="IsCastratedLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 11
+text = "Is Castrated:"
+horizontal_alignment = 2
+clip_text = true
+
+[node name="IsCastratedCheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+disabled = true
+button_pressed = true
+
+[node name="SexLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Sex:"
+horizontal_alignment = 2
+clip_text = true
+
+[node name="SexValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Female"
+clip_text = true
+
+[node name="SizeLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Size:"
+horizontal_alignment = 2
+clip_text = true
+
+[node name="SizeValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 11
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Big"
+clip_text = true
+
+[node name="CharacterLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Character:"
+horizontal_alignment = 2
+clip_text = true
+
+[node name="CharacterValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 11
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Friendly"
+clip_text = true
+
+[node name="HealthLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Health:"
+horizontal_alignment = 2
+clip_text = true
+
+[node name="HealthValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 11
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Health status Health status Health status Health status"
+autowrap_mode = 3
+
+[node name="EditContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="Padding" type="Control" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Padding2" type="Control" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Name:"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="EditNameValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Name"
+max_length = 64
+
+[node name="IsCastratedLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Is Castrated:"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="EditIsCastratedCheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+
+[node name="SexLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Sex:"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="EditSexOption" type="OptionButton" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 2
+popup/item_0/text = "Male"
+popup/item_1/text = "Female"
+popup/item_1/id = 1
+
+[node name="SizeLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Size:"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="EditSizeOption" type="OptionButton" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 4
+popup/item_0/text = "Small"
+popup/item_1/text = "Medium"
+popup/item_1/id = 1
+popup/item_2/text = "Big"
+popup/item_2/id = 2
+popup/item_3/text = "Extra Big"
+popup/item_3/id = 3
+
+[node name="CharacterLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Character:"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="EditCharacterOption" type="OptionButton" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 2
+popup/item_0/text = "Friendly"
+popup/item_1/text = "Agressive"
+popup/item_1/id = 1
+
+[node name="HealthLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Health:"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="EditHealthValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Health Status"
+max_length = 64
+
+[node name="padding" type="Control" parent="MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Save"
+
+[node name="CancelButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Cancel"
+
+[node name="EditButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Edit
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/EditImageButton" to="." method="_on_edit_image_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/EditButton" to="." method="_on_edit_button_pressed"]
