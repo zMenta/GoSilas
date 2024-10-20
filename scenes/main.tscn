@@ -142,3 +142,4 @@ filters = PackedStringArray("*.png", "*.jpg", "*.jpeg")
 [connection signal="create_card_cancel_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" to="." method="_on_create_card_create_card_cancel_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer/AddButton" to="." method="_on_add_button_pressed"]
 [connection signal="file_selected" from="FileDialog" to="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" method="_on_file_dialog_file_selected"]
+[connection signal="file_selected" from="FileDialog" to="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" method="_on_file_dialog_file_selected"]

@@ -4,7 +4,6 @@
 - On Animal resource, add a limit to health string length
 - Create a UI to select available adopters/addresses/animals (card creation or edit)
 - Add image compression (limit to a value) on image uploads
-- Add ability to upload images from computer file system
 - Add the ability to filter the content
 - Add the ability to delete resources (animals, adopters and addresses)
 - Add pages for the UI
@@ -19,6 +18,7 @@
 - Create the resource types for Adopters, Animals and Addresses [2024.09.29]
 - Finish the base UI from initial mock-up [2024.10.6]
 - Add a "add card" menu (edit, add, etc abilities) [2024.10.13]
+- Add ability to upload images from computer file system [2024.10.19]
 
 
 # Planning

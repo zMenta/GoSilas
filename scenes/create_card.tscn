@@ -34,6 +34,7 @@ size_flags_horizontal = 8
 text = "Cancel"
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
 size_flags_vertical = 3
@@ -190,5 +191,6 @@ layout_mode = 2
 text = "Cancel"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Cancel" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/EditImageButton" to="." method="_on_edit_image_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]

@@ -12,6 +12,7 @@ const CARD: PackedScene = preload("res://scenes/card.tscn")
 
 func _ready() -> void:
 	details_card.file_dialog = file_dialog
+	create_card.file_dialog = file_dialog
 	GlobalSignals.card_pressed.connect(_on_card_pressed)
 	for animal in Storage.save_file.animals:
 		var card := CARD.instantiate()
