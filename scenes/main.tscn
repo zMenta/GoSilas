@@ -41,17 +41,17 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 
-[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+[node name="AnimalButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Animals"
 
-[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+[node name="AdopterButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Adopters"
 
-[node name="Button6" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+[node name="AddressButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Addresses"
@@ -137,6 +137,9 @@ file_mode = 0
 access = 2
 filters = PackedStringArray("*.png", "*.jpg", "*.jpeg")
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Header/AnimalButton" to="." method="_on_animal_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Header/AdopterButton" to="." method="_on_adopter_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Header/AddressButton" to="." method="_on_address_button_pressed"]
 [connection signal="closed_button_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" to="." method="_on_card_details_closed_button_pressed"]
 [connection signal="animal_created" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" to="." method="_on_create_card_animal_created"]
 [connection signal="create_card_cancel_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" to="." method="_on_create_card_create_card_cancel_pressed"]

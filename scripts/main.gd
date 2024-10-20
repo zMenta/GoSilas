@@ -14,10 +14,7 @@ func _ready() -> void:
 	details_card.file_dialog = file_dialog
 	create_card.file_dialog = file_dialog
 	GlobalSignals.card_pressed.connect(_on_card_pressed)
-	for animal in Storage.save_file.animals:
-		var card := CARD.instantiate()
-		card.data = animal
-		card_container.add_child(card)
+	_on_animal_button_pressed()
 
 func _on_add_button_pressed() -> void:
 	for child:Control in left_container.get_children():
@@ -58,3 +55,28 @@ func _on_create_card_animal_created(animal: Animal) -> void:
 func _on_card_pressed(data: Resource) -> void:
 	show_card_details()
 	details_card.data = data
+
+func _clear_card_container() -> void:
+	for child in card_container.get_children():
+		child.queue_free()
+
+func _on_address_button_pressed() -> void:
+	_clear_card_container()
+	for address in Storage.save_file.address:
+		var card := CARD.instantiate()
+		card.data = address
+		card_container.add_child(card)
+
+func _on_adopter_button_pressed() -> void:
+	_clear_card_container()
+	for adopter in Storage.save_file.adopter:
+		var card := CARD.instantiate()
+		card.data = adopter
+		card_container.add_child(card)
+
+func _on_animal_button_pressed() -> void:
+	_clear_card_container()
+	for animal in Storage.save_file.animals:
+		var card := CARD.instantiate()
+		card.data = animal
+		card_container.add_child(card)
