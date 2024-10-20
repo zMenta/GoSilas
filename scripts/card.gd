@@ -1,5 +1,6 @@
 extends PanelContainer
 
+@onready var texture_rect: TextureRect = %TextureRect
 @onready var name_label: Label = %NameLabel
 @onready var sex_label: Label = %SexLabel
 @onready var size_label: Label = %SizeLabel
@@ -16,6 +17,7 @@ func _ready() -> void:
 
 func _set_values() -> void:
 	if data is Animal:
+		texture_rect.texture = data.image
 		name_label.text = data.name
 		match data.Sex:
 			0: sex_label.text = "Male"

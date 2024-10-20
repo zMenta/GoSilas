@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://dt8c6mponrxif"]
+[gd_scene load_steps=5 format=3 uid="uid://dt8c6mponrxif"]
 
-[ext_resource type="PackedScene" uid="uid://dk2ebyjp53c1" path="res://scenes/card.tscn" id="1_lddnq"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_sb6f2"]
 [ext_resource type="PackedScene" uid="uid://ctsprter837vf" path="res://scenes/card_details.tscn" id="2_lw0p6"]
 [ext_resource type="PackedScene" uid="uid://bljsuwvjv1n35" path="res://scenes/create_card.tscn" id="3_3swga"]
@@ -78,7 +77,6 @@ dragger_visibility = 2
 
 [node name="LeftContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -107,9 +105,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="card" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/CardContainer" instance=ExtResource("1_lddnq")]
-layout_mode = 2
-
 [node name="RightContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -132,7 +127,18 @@ layout_mode = 2
 unique_name_in_owner = true
 visible = false
 
+[node name="FileDialog" type="FileDialog" parent="."]
+unique_name_in_owner = true
+title = "Open a File"
+initial_position = 4
+size = Vector2i(800, 500)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png", "*.jpg", "*.jpeg")
+
 [connection signal="closed_button_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" to="." method="_on_card_details_closed_button_pressed"]
 [connection signal="animal_created" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" to="." method="_on_create_card_animal_created"]
 [connection signal="create_card_cancel_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" to="." method="_on_create_card_create_card_cancel_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer/AddButton" to="." method="_on_add_button_pressed"]
+[connection signal="file_selected" from="FileDialog" to="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" method="_on_file_dialog_file_selected"]

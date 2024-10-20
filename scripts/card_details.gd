@@ -2,6 +2,9 @@ extends PanelContainer
 
 signal closed_button_pressed
 
+var file_dialog: FileDialog = null
+
+@onready var image_rect: TextureRect = %ImageRect
 @onready var edit_button: Button = %EditButton
 @onready var save_button: Button = %SaveButton
 @onready var cancel_button: Button = %CancelButton
@@ -31,6 +34,7 @@ signal closed_button_pressed
 
 func _set_values() -> void:
 	# Display container
+	image_rect.texture = data.image
 	name_value.text = data.name
 	is_castrated_checkbox.button_pressed = data.is_castrated
 	match data.Sex:
@@ -77,6 +81,7 @@ func _on_close_button_pressed() -> void:
 
 func _on_save_button_pressed() -> void:
 	_show_display_menu()
+	data.image = image_rect.texture
 	data.name = edit_name_value.text
 	data.is_castrated = edit_is_castrated_check_box.button_pressed
 	data.Sex = edit_sex_option.selected
@@ -91,3 +96,12 @@ func _on_cancel_button_pressed() -> void:
 
 func _on_edit_button_pressed() -> void:
 	_show_edit_menu()
+
+func _on_edit_image_button_pressed() -> void:
+	if file_dialog == null:
+		return
+	file_dialog.show()
+
+func _on_file_dialog_file_selected(path:String) -> void:
+	var image: Image = Image.load_from_file(path)
+	image_rect.texture = ImageTexture.create_from_image(image)

@@ -3,6 +3,7 @@ extends PanelContainer
 signal create_card_cancel_pressed
 signal animal_created(animal: Animal)
 
+# @onready var image_rect: TextureRect = %Ima
 @onready var edit_name_value: LineEdit = %EditNameValue
 @onready var edit_is_castrated_check_box: CheckBox = %EditIsCastratedCheckBox
 @onready var edit_sex_option: OptionButton = %EditSexOption
@@ -32,3 +33,6 @@ func _on_save_button_pressed() -> void:
 	new_animal.health_state = edit_health_value.text
 	animal_created.emit(new_animal)
 	clear_fields()
+
+func _on_edit_image_button_pressed() -> void:
+	pass

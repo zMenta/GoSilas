@@ -1,5 +1,6 @@
 extends PanelContainer
 
+@onready var file_dialog: FileDialog = %FileDialog
 @onready var card_container : HFlowContainer = %CardContainer
 @onready var left_container : MarginContainer = %LeftContainer
 @onready var main_split_container : HSplitContainer = %MainSplitContainer
@@ -10,7 +11,12 @@ extends PanelContainer
 const CARD: PackedScene = preload("res://scenes/card.tscn")
 
 func _ready() -> void:
+	details_card.file_dialog = file_dialog
 	GlobalSignals.card_pressed.connect(_on_card_pressed)
+	for animal in Storage.save_file.animals:
+		var card := CARD.instantiate()
+		card.data = animal
+		card_container.add_child(card)
 
 func _on_add_button_pressed() -> void:
 	for child:Control in left_container.get_children():
