@@ -51,6 +51,7 @@ func _on_create_card_animal_created(animal: Animal) -> void:
 	var card := CARD.instantiate()
 	card.data = animal
 	card_container.add_child(card)
+	Storage.save_file.animals.append(animal)
 
 func _on_card_pressed(data: Resource) -> void:
 	show_card_details()
