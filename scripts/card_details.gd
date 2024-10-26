@@ -25,7 +25,7 @@ var file_dialog: FileDialog = null
 @onready var edit_name_value: LineEdit = %EditNameValue
 @onready var edit_image_button : Button = %EditImageButton
 
-@export var data: Animal :
+@export var data: Resource :
 	set(new_data):
 		data = new_data
 		if data != null:
@@ -38,16 +38,16 @@ func _set_values() -> void:
 	name_value.text = data.name
 	is_castrated_checkbox.button_pressed = data.is_castrated
 	match data.Sex:
-		0: sex_value.text = "Male"
-		1: sex_value.text = "Female"
+		0: sex_value.text = "Masculino"
+		1: sex_value.text = "Feminino"
 	match data.Character:
-		0: character_value.text = "Friendly"
-		1: character_value.text = "Agressive"
+		0: character_value.text = "Amigável"
+		1: character_value.text = "Agressivo"
 	match data.Size:
-		0: size_value.text = "Small"
-		1: size_value.text = "Medium"
-		2: size_value.text = "Big"
-		3: size_value.text = "Extra Big"
+		0: size_value.text = "Pequeno"
+		1: size_value.text = "Médio"
+		2: size_value.text = "Grande"
+		3: size_value.text = "Extra Grande"
 	health_value.text = data.health_state
 	# Edit container
 	edit_name_value.text = data.name

@@ -38,7 +38,7 @@ func _check_dragger_visibility() -> void:
 
 func _on_card_details_closed_button_pressed() -> void:
 	details_card.show()
-	left_container.visible = !left_container.visible
+	left_container.visible = false
 	_check_dragger_visibility()
 
 func _on_create_card_create_card_cancel_pressed() -> void:

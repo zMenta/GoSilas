@@ -29,12 +29,12 @@ layout_mode = 2
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "File"
+text = "Arquivo"
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Save"
+text = "Salvar"
 
 [node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
@@ -44,12 +44,12 @@ size_flags_stretch_ratio = 3.0
 [node name="AnimalButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Animals"
+text = "Animais"
 
 [node name="AdopterButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Adopters"
+text = "Adotantes"
 
 [node name="AddressButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
@@ -64,7 +64,7 @@ size_flags_stretch_ratio = 3.0
 [node name="Button5" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Options"
+text = "Opções"
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -77,11 +77,13 @@ dragger_visibility = 2
 
 [node name="LeftContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="CardDetails" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("2_lw0p6")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 
 [node name="CreateCard" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("3_3swga")]
@@ -114,11 +116,12 @@ layout_mode = 2
 
 [node name="AddButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer"]
 layout_mode = 2
-text = "Add animal"
+text = "Adicionar Animal"
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer"]
 layout_mode = 2
-text = "Filter"
+text = "Filtrar
+"
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer"]
 layout_mode = 2

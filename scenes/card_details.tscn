@@ -29,7 +29,7 @@ alignment = 1
 [node name="CloseButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-text = "Close"
+text = "Fechar"
 
 [node name="ImageRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -71,7 +71,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Name:"
+text = "Nome:"
 horizontal_alignment = 2
 clip_text = true
 
@@ -88,7 +88,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 11
-text = "Is Castrated:"
+text = "Castrado:"
 horizontal_alignment = 2
 clip_text = true
 
@@ -105,7 +105,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Sex:"
+text = "Sexo:"
 horizontal_alignment = 2
 clip_text = true
 
@@ -123,7 +123,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Size:"
+text = "Tamanho:"
 horizontal_alignment = 2
 clip_text = true
 
@@ -142,7 +142,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Character:"
+text = "Personalidade:"
 horizontal_alignment = 2
 clip_text = true
 
@@ -161,7 +161,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Health:"
+text = "Observações"
 horizontal_alignment = 2
 clip_text = true
 
@@ -198,7 +198,7 @@ custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Name:"
+text = "Nome:"
 horizontal_alignment = 1
 clip_text = true
 
@@ -207,14 +207,14 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "Name"
+placeholder_text = "Nome"
 max_length = 64
 
 [node name="IsCastratedLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
-text = "Is Castrated:"
+text = "Castrado:"
 horizontal_alignment = 1
 clip_text = true
 
@@ -229,7 +229,7 @@ button_pressed = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
-text = "Sex:"
+text = "Sexo:"
 horizontal_alignment = 1
 clip_text = true
 
@@ -240,8 +240,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 selected = 0
 item_count = 2
-popup/item_0/text = "Male"
-popup/item_1/text = "Female"
+popup/item_0/text = "Masculino"
+popup/item_1/text = "Feminino"
 popup/item_1/id = 1
 
 [node name="SizeLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
@@ -249,7 +249,7 @@ custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Size:"
+text = "Tamanho:"
 horizontal_alignment = 1
 clip_text = true
 
@@ -260,12 +260,12 @@ layout_mode = 2
 size_flags_horizontal = 3
 selected = 0
 item_count = 4
-popup/item_0/text = "Small"
-popup/item_1/text = "Medium"
+popup/item_0/text = "Pequeno"
+popup/item_1/text = "Médio"
 popup/item_1/id = 1
-popup/item_2/text = "Big"
+popup/item_2/text = "Grande"
 popup/item_2/id = 2
-popup/item_3/text = "Extra Big"
+popup/item_3/text = "Extra Grande"
 popup/item_3/id = 3
 
 [node name="CharacterLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
@@ -273,7 +273,7 @@ custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Character:"
+text = "Personalidade:"
 horizontal_alignment = 1
 clip_text = true
 
@@ -284,8 +284,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 selected = 0
 item_count = 2
-popup/item_0/text = "Friendly"
-popup/item_1/text = "Agressive"
+popup/item_0/text = "Amigável"
+popup/item_1/text = "Agressivo"
 popup/item_1/id = 1
 
 [node name="HealthLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
@@ -293,7 +293,7 @@ custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Health:"
+text = "Observações:"
 horizontal_alignment = 1
 clip_text = true
 
@@ -302,7 +302,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "Health Status"
+placeholder_text = "Observações"
 max_length = 64
 
 [node name="padding" type="Control" parent="MarginContainer/VBoxContainer/EditContainer"]
@@ -312,18 +312,18 @@ layout_mode = 2
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
-text = "Save"
+text = "Salvar"
 
 [node name="CancelButton" type="Button" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
-text = "Cancel"
+text = "Cancelar"
 
 [node name="EditButton" type="Button" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Edit
+text = "Editar
 "
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
