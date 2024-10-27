@@ -5,13 +5,14 @@ extends PanelContainer
 @onready var left_container : MarginContainer = %LeftContainer
 @onready var main_split_container : HSplitContainer = %MainSplitContainer
 @onready var create_card : PanelContainer = %CreateCard
-@onready var details_card : PanelContainer = %CardDetails
+@onready var details_card_animal : PanelContainer = %CardDetails
+@onready var details_card_adopter: PanelContainer = %CardDetailsAdopter
 # @onready var resource_picker : PopupPanel = %ResourcePickerMenu
 
 const CARD: PackedScene = preload("res://scenes/card.tscn")
 
 func _ready() -> void:
-	details_card.file_dialog = file_dialog
+	details_card_animal.file_dialog = file_dialog
 	create_card.file_dialog = file_dialog
 	GlobalSignals.card_pressed.connect(_on_card_pressed)
 	_on_animal_button_pressed()
@@ -23,13 +24,6 @@ func _on_add_button_pressed() -> void:
 	left_container.show()
 	_check_dragger_visibility()
 
-func show_card_details() -> void:
-	for child:Control in left_container.get_children():
-		child.hide()
-	details_card.show()
-	left_container.show()
-	_check_dragger_visibility()
-
 func _check_dragger_visibility() -> void:
 	if left_container.visible == true:
 		main_split_container.dragger_visibility = main_split_container.DraggerVisibility.DRAGGER_VISIBLE
@@ -37,7 +31,7 @@ func _check_dragger_visibility() -> void:
 		main_split_container.dragger_visibility = main_split_container.DraggerVisibility.DRAGGER_HIDDEN_COLLAPSED
 
 func _on_card_details_closed_button_pressed() -> void:
-	details_card.show()
+	details_card_animal.show()
 	left_container.visible = false
 	_check_dragger_visibility()
 
@@ -54,8 +48,16 @@ func _on_create_card_animal_created(animal: Animal) -> void:
 	Storage.save_file.animals.append(animal)
 
 func _on_card_pressed(data: Resource) -> void:
-	show_card_details()
-	details_card.data = data
+	for child:Control in left_container.get_children():
+		child.hide()
+	if data is Animal:
+		details_card_animal.show()
+		details_card_animal.data = data
+	elif data is Adopter:
+		details_card_adopter.show()
+		details_card_adopter.data = data
+	left_container.show()
+	_check_dragger_visibility()
 
 func _clear_card_container() -> void:
 	for child in card_container.get_children():

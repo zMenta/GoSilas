@@ -1,0 +1,215 @@
+[gd_scene load_steps=3 format=3 uid="uid://dysryegjf8kl6"]
+
+[ext_resource type="Script" path="res://scripts/card_details_adopter.gd" id="1_lu0r0"]
+[ext_resource type="Texture2D" uid="uid://c70kgdtiq3sru" path="res://test_data/dog.jpg" id="3_lknp8"]
+
+[node name="CardDetailsAdopter" type="PanelContainer"]
+offset_left = 17.0
+offset_top = 25.0
+offset_right = 366.0
+offset_bottom = 621.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_lu0r0")
+metadata/_edit_vertical_guides_ = [98.0]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CloseButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Fechar"
+
+[node name="ImageRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_lknp8")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="EditImageButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Upload Image"
+
+[node name="DisplayContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="Padding" type="Control" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Padding2" type="Control" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Nome:"
+horizontal_alignment = 2
+clip_text = true
+
+[node name="NameValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "NameName"
+clip_text = true
+
+[node name="CpfLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "CPF:"
+horizontal_alignment = 2
+clip_text = true
+
+[node name="CpfValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "00000000000"
+clip_text = true
+
+[node name="TelephoneLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Telefone:"
+horizontal_alignment = 2
+clip_text = true
+
+[node name="TelephoneValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 11
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "55 88888888"
+clip_text = true
+
+[node name="EditContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="Padding" type="Control" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Padding2" type="Control" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Nome"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="EditNameValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Nome"
+max_length = 64
+
+[node name="CpfLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "CPF:"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="EditCpfValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "CPF"
+max_length = 64
+
+[node name="TelephoneLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Telefone:"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="EditTelephoneValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Telefone"
+max_length = 64
+
+[node name="padding" type="Control" parent="MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Save"
+
+[node name="CancelButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Cancel"
+
+[node name="EditButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Editar"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/EditImageButton" to="." method="_on_edit_image_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/EditButton" to="." method="_on_edit_button_pressed"]
