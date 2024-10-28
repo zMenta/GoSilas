@@ -1,16 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dysryegjf8kl6"]
+[gd_scene load_steps=3 format=3 uid="uid://dw1i620q5rg3f"]
 
-[ext_resource type="Script" path="res://scripts/card_details_adopter.gd" id="1_lu0r0"]
-[ext_resource type="Texture2D" uid="uid://c70kgdtiq3sru" path="res://test_data/dog.jpg" id="3_lknp8"]
+[ext_resource type="Script" path="res://scripts/card_details_adress.gd" id="1_cj74e"]
+[ext_resource type="Texture2D" uid="uid://c70kgdtiq3sru" path="res://test_data/dog.jpg" id="2_qxo77"]
 
-[node name="CardDetailsAdopter" type="PanelContainer"]
+[node name="CardDetailsAdress" type="PanelContainer"]
 offset_left = 17.0
 offset_top = 25.0
 offset_right = 366.0
 offset_bottom = 621.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_lu0r0")
+script = ExtResource("1_cj74e")
 metadata/_edit_vertical_guides_ = [98.0]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -35,7 +35,7 @@ visible = false
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("3_lknp8")
+texture = ExtResource("2_qxo77")
 expand_mode = 2
 stretch_mode = 5
 
@@ -64,17 +64,17 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 15)
 layout_mode = 2
 
-[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+[node name="StateLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Nome:"
+text = "Estado:"
 horizontal_alignment = 2
 clip_text = true
 
-[node name="NameValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+[node name="StateValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -82,17 +82,17 @@ theme_override_font_sizes/font_size = 11
 text = "NameName"
 clip_text = true
 
-[node name="CpfLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+[node name="CityLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "CPF:"
+text = "Cidade:"
 horizontal_alignment = 2
 clip_text = true
 
-[node name="CpfValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+[node name="CityValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -100,17 +100,36 @@ theme_override_font_sizes/font_size = 11
 text = "00000000000"
 clip_text = true
 
-[node name="TelephoneLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+[node name="StreetNameLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Telefone:"
+text = "Nome da Rua:"
 horizontal_alignment = 2
 clip_text = true
 
-[node name="TelephoneValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+[node name="StreetNameValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 11
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "55 88888888"
+clip_text = true
+
+[node name="NumberLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Número:"
+horizontal_alignment = 2
+clip_text = true
+
+[node name="NumberValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 11
@@ -142,16 +161,16 @@ custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Nome:"
+text = "Estado:"
 horizontal_alignment = 1
 clip_text = true
 
-[node name="EditNameValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="EditStateValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "Nome"
+placeholder_text = "Estado"
 max_length = 64
 
 [node name="CpfLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
@@ -159,16 +178,16 @@ custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "CPF:"
+text = "Cidade:"
 horizontal_alignment = 1
 clip_text = true
 
-[node name="EditCpfValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="EditCityValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "CPF"
+placeholder_text = "Cidade"
 max_length = 64
 
 [node name="TelephoneLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
@@ -176,17 +195,32 @@ custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
-text = "Telefone:"
+text = "Nome da Rua:"
 horizontal_alignment = 1
 clip_text = true
 
-[node name="EditTelephoneValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="EditStreetNameValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "Telefone"
+placeholder_text = "Nome da Rua"
 max_length = 64
+
+[node name="TelephoneLabel2" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Número:"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="EditNumberSpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 10000.0
+alignment = 1
 
 [node name="padding" type="Control" parent="MarginContainer/VBoxContainer/EditContainer"]
 layout_mode = 2

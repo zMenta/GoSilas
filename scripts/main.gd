@@ -8,6 +8,7 @@ extends PanelContainer
 @onready var create_adopter_card: PanelContainer = %CreateCardAdopter
 @onready var details_card_animal : PanelContainer = %CardDetails
 @onready var details_card_adopter: PanelContainer = %CardDetailsAdopter
+@onready var details_card_address: PanelContainer = %CardDetailsAdress
 # @onready var resource_picker : PopupPanel = %ResourcePickerMenu
 @onready var add_animal_button: Button = %AddAnimal
 @onready var add_adopter_button: Button = %AddAdopter
@@ -60,6 +61,9 @@ func _on_card_pressed(data: Resource) -> void:
 	elif data is Adopter:
 		details_card_adopter.show()
 		details_card_adopter.data = data
+	elif data is Address:
+		details_card_address.show()
+		details_card_address.data = data
 	left_container.show()
 	_check_dragger_visibility()
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dt8c6mponrxif"]
+[gd_scene load_steps=8 format=3 uid="uid://dt8c6mponrxif"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_sb6f2"]
 [ext_resource type="PackedScene" uid="uid://ctsprter837vf" path="res://scenes/card_details.tscn" id="2_lw0p6"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dysryegjf8kl6" path="res://scenes/card_details_adopter.tscn" id="4_0fn0x"]
 [ext_resource type="PackedScene" uid="uid://dh4a8pg6vfy3o" path="res://scenes/resource_picker_menu.tscn" id="4_3nuo6"]
 [ext_resource type="PackedScene" uid="uid://b83cjx1jkrbct" path="res://scenes/create_card_adopter.tscn" id="5_2vnid"]
+[ext_resource type="PackedScene" uid="uid://dw1i620q5rg3f" path="res://scenes/card_details_adress.tscn" id="6_0536k"]
 
 [node name="Main" type="PanelContainer"]
 anchors_preset = 15
@@ -103,6 +104,10 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 
+[node name="CardDetailsAdress" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("6_0536k")]
+unique_name_in_owner = true
+layout_mode = 2
+
 [node name="CardContainer" type="HSplitContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -174,6 +179,7 @@ filters = PackedStringArray("*.png", "*.jpg", "*.jpeg")
 [connection signal="closed_button_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetailsAdopter" to="." method="_on_card_details_closed_button_pressed"]
 [connection signal="adopter_created" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCardAdopter" to="." method="_on_create_card_created"]
 [connection signal="create_card_cancel_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCardAdopter" to="." method="_on_create_card_create_card_cancel_pressed"]
+[connection signal="closed_button_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetailsAdress" to="." method="_on_card_details_closed_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer/AddAnimal" to="." method="_on_add_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer/AddAdopter" to="." method="_on_add_adopter_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer/AddAddress" to="." method="_on_add_address_pressed"]
