@@ -6,6 +6,7 @@ extends PanelContainer
 @onready var main_split_container : HSplitContainer = %MainSplitContainer
 @onready var create_card : PanelContainer = %CreateCard
 @onready var create_adopter_card: PanelContainer = %CreateCardAdopter
+@onready var create_address_card: PanelContainer = %CreateCardAddress
 @onready var details_card_animal : PanelContainer = %CardDetails
 @onready var details_card_adopter: PanelContainer = %CardDetailsAdopter
 @onready var details_card_address: PanelContainer = %CardDetailsAdress
@@ -50,7 +51,7 @@ func _on_create_card_created(data: Resource) -> void:
 		Storage.save_file.adopter.append(data)
 	if data is Address:
 		card_container.add_child(card)
-		Storage.save_filel.address.append(data)
+		Storage.save_file.address.append(data)
 
 func _on_card_pressed(data: Resource) -> void:
 	for child:Control in left_container.get_children():
@@ -117,6 +118,7 @@ func _on_add_button_pressed() -> void:
 
 func _on_add_address_pressed() -> void:
 	_create_ui_card_setup()
+	create_address_card.show()
 
 func _on_add_adopter_pressed() -> void:
 	_create_ui_card_setup()
