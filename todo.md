@@ -4,12 +4,10 @@
 - On Animal resource, add a limit to health string length
 - Add image compression (limit to a value) on image uploads
 - Add the ability to filter the content
-- Add the ability to delete resources (animals, adopters and addresses)
 - Add pages for the UI
 
 ## Doing
-- Create a UI to select available adopters/addresses/animals (card creation or edit)
-- Add a "create" and "details" menu for adopters and addresses.
+- Add the ability to delete resources (animals, adopters and addresses)
 
 ## Completed
 - Basic UML | Flowchart [2024.09.23]
@@ -21,6 +19,8 @@
 - Add ability to upload images from computer file system [2024.10.19]
 - Add the menus for adopters and addresses [2024.10.20]
 - Make the texts in Portuguese [2024.10.26]
+- Create a UI to select available adopters/addresses/animals (card creation or edit) [2024.10.28]
+- Add a "create" and "details" menu for adopters and addresses. [2024.10.28]
 
 
 # Planning
