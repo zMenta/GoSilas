@@ -123,3 +123,6 @@ func _on_add_address_pressed() -> void:
 func _on_add_adopter_pressed() -> void:
 	_create_ui_card_setup()
 	create_adopter_card.show()
+
+func _on_card_details_animal_deleted() -> void:
+	_on_animal_button_pressed()

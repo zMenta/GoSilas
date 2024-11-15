@@ -1,6 +1,7 @@
 extends PanelContainer
 
 signal closed_button_pressed
+signal animal_deleted
 
 var file_dialog: FileDialog = null
 
@@ -24,6 +25,7 @@ var file_dialog: FileDialog = null
 @onready var edit_health_value: LineEdit = %EditHealthValue
 @onready var edit_name_value: LineEdit = %EditNameValue
 @onready var edit_image_button : Button = %EditImageButton
+@onready var delete_button: Button = %DeleteButton
 
 @export var data: Resource :
 	set(new_data):
@@ -105,3 +107,9 @@ func _on_edit_image_button_pressed() -> void:
 func _on_file_dialog_file_selected(path:String) -> void:
 	var image: Image = Image.load_from_file(path)
 	image_rect.texture = ImageTexture.create_from_image(image)
+
+
+func _on_delete_button_pressed() -> void:
+	Storage.save_file.animals.erase(self.data)
+	closed_button_pressed.emit()
+	animal_deleted.emit()
