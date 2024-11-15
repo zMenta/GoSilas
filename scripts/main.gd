@@ -129,3 +129,6 @@ func _on_card_details_animal_deleted() -> void:
 
 func _on_card_details_adress_address_deleted() -> void:
 	_on_address_button_pressed()
+
+func _on_card_details_adopter_adopter_deleted() -> void:
+	_on_adopter_button_pressed()

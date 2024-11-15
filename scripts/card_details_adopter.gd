@@ -1,6 +1,7 @@
 extends PanelContainer
 
 signal closed_button_pressed
+signal adopter_deleted
 
 @onready var edit_button: Button = %EditButton
 @onready var save_button: Button = %SaveButton
@@ -13,6 +14,7 @@ signal closed_button_pressed
 @onready var edit_name_value: LineEdit = %EditNameValue
 @onready var edit_cpf_value: LineEdit = %EditCpfValue
 @onready var edit_telephone_value: LineEdit = %EditTelephoneValue
+@onready var delete_button: Button = %DeleteButton
 
 @export var data: Resource :
 	set(new_data):
@@ -39,7 +41,7 @@ func _show_edit_menu() -> void:
 	save_button.show()
 	cancel_button.show()
 	edit_button.hide()
-
+	delete_button.show()
 
 func _show_display_menu() -> void:
 	edit_container.hide()
@@ -47,7 +49,7 @@ func _show_display_menu() -> void:
 	edit_button.show()
 	cancel_button.hide()
 	save_button.hide()
-
+	delete_button.hide()
 
 func _on_close_button_pressed() -> void:
 	closed_button_pressed.emit()
@@ -66,3 +68,8 @@ func _on_cancel_button_pressed() -> void:
 
 func _on_edit_button_pressed() -> void:
 	_show_edit_menu()
+
+func _on_delete_button_pressed() -> void:
+	Storage.save_file.adopter.erase(self.data)
+	closed_button_pressed.emit()
+	adopter_deleted.emit()
