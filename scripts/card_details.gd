@@ -67,7 +67,7 @@ func _show_edit_menu() -> void:
 	cancel_button.show()
 	edit_button.hide()
 	edit_image_button.show()
-
+	delete_button.show()
 
 func _show_display_menu() -> void:
 	edit_container.hide()
@@ -76,7 +76,7 @@ func _show_display_menu() -> void:
 	cancel_button.hide()
 	save_button.hide()
 	edit_image_button.hide()
-
+	delete_button.hide()
 
 func _on_close_button_pressed() -> void:
 	closed_button_pressed.emit()
