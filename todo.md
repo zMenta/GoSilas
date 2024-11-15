@@ -7,7 +7,8 @@
 - Add pages for the UI
 
 ## Doing
-- Add the ability to delete resources (animals, adopters and addresses)
+- Add a related entity menu
+- Update the Details cards with related entities
 
 ## Completed
 - Basic UML | Flowchart [2024.09.23]
@@ -21,6 +22,7 @@
 - Make the texts in Portuguese [2024.10.26]
 - Create a UI to select available adopters/addresses/animals (card creation or edit) [2024.10.28]
 - Add a "create" and "details" menu for adopters and addresses. [2024.10.28]
+- Add the ability to delete resources (animals, adopters and addresses) [2024.11.15]
 
 
 # Planning
