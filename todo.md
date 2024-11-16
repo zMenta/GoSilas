@@ -3,12 +3,13 @@
 - Add a UI Style
 - On Animal resource, add a limit to health string length
 - Add image compression (limit to a value) on image uploads
-- Add the ability to filter the content
 - Add pages for the UI
 
-## Doing
 - Add a related entity menu
-- Update the Details cards with related entities
+- Add Details cards with related entities field
+
+## Doing
+- Add the ability to filter the content
 
 ## Completed
 - Basic UML | Flowchart [2024.09.23]
