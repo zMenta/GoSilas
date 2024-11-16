@@ -79,55 +79,11 @@ unique_name_in_owner = true
 layout_mode = 2
 dragger_visibility = 2
 
-[node name="LeftContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="CardDetails" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("2_lw0p6")]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-
-[node name="CreateCard" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("3_3swga")]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-
-[node name="CardDetailsAdopter" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("4_0fn0x")]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-
-[node name="CreateCardAdopter" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("5_2vnid")]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-
-[node name="CardDetailsAdress" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("6_0536k")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="CreateCardAddress" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("7_dsjvw")]
-unique_name_in_owner = true
-layout_mode = 2
-
 [node name="CardContainer" type="HSplitContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
-
-[node name="MainWindow" type="ScrollContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 6.0
-
-[node name="CardContainer" type="HFlowContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+dragger_visibility = 2
 
 [node name="RightContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer"]
 layout_mode = 2
@@ -184,6 +140,61 @@ size_flags_horizontal = 3
 text = "Limpar Filtro
 "
 
+[node name="MainWindow" type="ScrollContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="CardContainer" type="HFlowContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LeftContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CardDetails" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("2_lw0p6")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CreateCard" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("3_3swga")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="CardDetailsAdopter" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("4_0fn0x")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="CreateCardAdopter" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("5_2vnid")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="CardDetailsAdress" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("6_0536k")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="CreateCardAddress" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("7_dsjvw")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer"]
 layout_mode = 2
 
@@ -204,6 +215,11 @@ filters = PackedStringArray("*.png", "*.jpg", "*.jpeg")
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Header/AnimalButton" to="." method="_on_animal_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Header/AdopterButton" to="." method="_on_adopter_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Header/AddressButton" to="." method="_on_address_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/AddAnimal" to="." method="_on_add_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/AddAdopter" to="." method="_on_add_adopter_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/AddAddress" to="." method="_on_add_address_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/FilterButton" to="." method="_on_filter_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/FilterClearButton" to="." method="_on_filter_clear_button_pressed"]
 [connection signal="animal_deleted" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" to="." method="_on_card_details_animal_deleted"]
 [connection signal="closed_button_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" to="." method="_on_card_details_closed_button_pressed"]
 [connection signal="animal_created" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" to="." method="_on_create_card_created"]
@@ -216,10 +232,5 @@ filters = PackedStringArray("*.png", "*.jpg", "*.jpeg")
 [connection signal="closed_button_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetailsAdress" to="." method="_on_card_details_closed_button_pressed"]
 [connection signal="address_created" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCardAddress" to="." method="_on_create_card_created"]
 [connection signal="create_card_cancel_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCardAddress" to="." method="_on_create_card_create_card_cancel_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/AddAnimal" to="." method="_on_add_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/AddAdopter" to="." method="_on_add_adopter_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/AddAddress" to="." method="_on_add_address_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/FilterButton" to="." method="_on_filter_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/FilterClearButton" to="." method="_on_filter_clear_button_pressed"]
 [connection signal="file_selected" from="FileDialog" to="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" method="_on_file_dialog_file_selected"]
 [connection signal="file_selected" from="FileDialog" to="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" method="_on_file_dialog_file_selected"]

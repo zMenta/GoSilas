@@ -32,8 +32,13 @@ folder_colors={
 "res://resources/": "purple",
 "res://scenes/": "orange",
 "res://scripts/": "green",
-"res://test_data/": "gray"
+"res://test_data/": "gray",
+"res://themes/": "blue"
 }
+
+[gui]
+
+theme/custom="res://themes/DefaultTheme.tres"
 
 [rendering]
 

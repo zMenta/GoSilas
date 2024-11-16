@@ -28,10 +28,11 @@ func _ready() -> void:
 	_on_animal_button_pressed()
 
 func _check_dragger_visibility() -> void:
-	if left_container.visible == true:
-		main_split_container.dragger_visibility = main_split_container.DraggerVisibility.DRAGGER_VISIBLE
-	else:
-		main_split_container.dragger_visibility = main_split_container.DraggerVisibility.DRAGGER_HIDDEN_COLLAPSED
+	# if left_container.visible == true:
+	# 	main_split_container.dragger_visibility = main_split_container.DraggerVisibility.DRAGGER_VISIBLE
+	# else:
+	# 	main_split_container.dragger_visibility = main_split_container.DraggerVisibility.DRAGGER_HIDDEN_COLLAPSED
+	pass
 
 func _on_card_details_closed_button_pressed() -> void:
 	details_card_animal.show()
