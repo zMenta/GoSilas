@@ -5,11 +5,11 @@
 - Add image compression (limit to a value) on image uploads
 - Add pages for the UI
 
-- Add a related entity menu
-- Add Details cards with related entities field
+- Add a menu to edit entities relationship
 
 ## Doing
-- Add the ability to filter the content
+- Refactory, adjust the card details layout
+- Add Details cards with related entities field (related Animals, Adopters, Addresses)
 
 ## Completed
 - Basic UML | Flowchart [2024.09.23]
@@ -24,6 +24,7 @@
 - Create a UI to select available adopters/addresses/animals (card creation or edit) [2024.10.28]
 - Add a "create" and "details" menu for adopters and addresses. [2024.10.28]
 - Add the ability to delete resources (animals, adopters and addresses) [2024.11.15]
+- Add the ability to filter the content [2024.11.16]
 
 
 # Planning
