@@ -14,6 +14,10 @@ extends PanelContainer
 @onready var add_animal_button: Button = %AddAnimal
 @onready var add_adopter_button: Button = %AddAdopter
 @onready var add_address_button: Button = %AddAddress
+@onready var filter_line_edit: LineEdit = %FilterLineEdit
+
+enum CardEntities {animal, adopter, address}
+var current_card_entity: int = 0
 
 const CARD: PackedScene = preload("res://scenes/card.tscn")
 
@@ -72,35 +76,38 @@ func _clear_card_container() -> void:
 	for child in card_container.get_children():
 		child.queue_free()
 
-func _on_address_button_pressed() -> void:
+func _on_address_button_pressed(addresses: Array[Address] = Storage.save_file.address) -> void:
+	current_card_entity = CardEntities.address
 	add_animal_button.hide()
 	add_adopter_button.hide()
 	add_address_button.show()
 	_clear_card_container()
 	_on_create_card_create_card_cancel_pressed()
-	for address in Storage.save_file.address:
+	for address in addresses:
 		var card := CARD.instantiate()
 		card.data = address
 		card_container.add_child(card)
 
-func _on_adopter_button_pressed() -> void:
+func _on_adopter_button_pressed(adopters: Array[Adopter] = Storage.save_file.adopter) -> void:
+	current_card_entity = CardEntities.adopter
 	add_animal_button.hide()
 	add_adopter_button.show()
 	add_address_button.hide()
 	_clear_card_container()
 	_on_create_card_create_card_cancel_pressed()
-	for adopter in Storage.save_file.adopter:
+	for adopter in adopters:
 		var card := CARD.instantiate()
 		card.data = adopter
 		card_container.add_child(card)
 
-func _on_animal_button_pressed() -> void:
+func _on_animal_button_pressed(animals: Array[Animal] = Storage.save_file.animals) -> void:
+	current_card_entity = CardEntities.animal
 	add_animal_button.show()
 	add_adopter_button.hide()
 	add_address_button.hide()
 	_clear_card_container()
 	_on_create_card_create_card_cancel_pressed()
-	for animal in Storage.save_file.animals:
+	for animal in animals:
 		var card := CARD.instantiate()
 		card.data = animal
 		card_container.add_child(card)
@@ -132,3 +139,35 @@ func _on_card_details_adress_address_deleted() -> void:
 
 func _on_card_details_adopter_adopter_deleted() -> void:
 	_on_adopter_button_pressed()
+
+func _on_filter_clear_button_pressed() -> void:
+	filter_line_edit.text = ""
+	_on_filter_button_pressed()
+
+func _on_filter_button_pressed() -> void:
+	if filter_line_edit.text == "":
+		match current_card_entity:
+			CardEntities.animal:
+				_on_animal_button_pressed()
+			CardEntities.adopter:
+				_on_adopter_button_pressed()
+			CardEntities.address:
+				_on_address_button_pressed()
+		return
+
+	match current_card_entity:
+		CardEntities.animal:
+			_on_animal_button_pressed(Storage.save_file.animals.filter(
+				func(animal: Animal):
+					return animal.name.containsn(filter_line_edit.text)
+					))
+		CardEntities.adopter:
+			_on_adopter_button_pressed(Storage.save_file.adopter.filter(
+				func(adopter: Adopter):
+					return adopter.name.containsn(filter_line_edit.text)
+					))
+		CardEntities.address:
+			_on_address_button_pressed(Storage.save_file.address.filter(
+				func(address: Address):
+					return address.city.containsn(filter_line_edit.text)
+					))

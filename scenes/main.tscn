@@ -133,29 +133,55 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="AddAnimal" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer"]
+[node name="AddAnimal" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Adicionar Animal"
 
-[node name="AddAdopter" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer"]
+[node name="AddAdopter" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 text = "Adicionar Adotante"
 
-[node name="AddAddress" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer"]
+[node name="AddAddress" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 text = "Adicionar Endereço"
 
-[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Filtrar
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Filtrar"
+horizontal_alignment = 1
+
+[node name="FilterLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Filtrar por nome"
+
+[node name="FilterButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Buscar"
+
+[node name="FilterClearButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Limpar Filtro
 "
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer"]
@@ -190,8 +216,10 @@ filters = PackedStringArray("*.png", "*.jpg", "*.jpeg")
 [connection signal="closed_button_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetailsAdress" to="." method="_on_card_details_closed_button_pressed"]
 [connection signal="address_created" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCardAddress" to="." method="_on_create_card_created"]
 [connection signal="create_card_cancel_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCardAddress" to="." method="_on_create_card_create_card_cancel_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer/AddAnimal" to="." method="_on_add_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer/AddAdopter" to="." method="_on_add_adopter_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/VBoxContainer/AddAddress" to="." method="_on_add_address_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/AddAnimal" to="." method="_on_add_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/AddAdopter" to="." method="_on_add_adopter_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/AddAddress" to="." method="_on_add_address_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/FilterButton" to="." method="_on_filter_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/FilterClearButton" to="." method="_on_filter_clear_button_pressed"]
 [connection signal="file_selected" from="FileDialog" to="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" method="_on_file_dialog_file_selected"]
 [connection signal="file_selected" from="FileDialog" to="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" method="_on_file_dialog_file_selected"]
