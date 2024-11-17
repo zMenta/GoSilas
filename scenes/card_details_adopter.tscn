@@ -20,25 +20,25 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="DeleteButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="NameValue" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
-text = "Deletar"
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 18
+text = "NameName"
+clip_text = true
 
-[node name="CloseButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 10
-text = "Fechar"
-
-[node name="ImageRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+[node name="ImageRect" type="TextureRect" parent="MarginContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(25, 25)
@@ -48,7 +48,7 @@ texture = ExtResource("3_lknp8")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="EditImageButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="EditImageButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -56,52 +56,34 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Upload Image"
 
-[node name="DisplayContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+[node name="DisplayContainer" type="GridContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
-theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 5
+theme_override_constants/h_separation = -5
 columns = 2
 
-[node name="Padding" type="Control" parent="MarginContainer/VBoxContainer/DisplayContainer"]
-custom_minimum_size = Vector2(0, 15)
-layout_mode = 2
-
-[node name="Padding2" type="Control" parent="MarginContainer/VBoxContainer/DisplayContainer"]
-custom_minimum_size = Vector2(0, 15)
-layout_mode = 2
-
-[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+[node name="NameLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/DisplayContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
 text = "Nome:"
-horizontal_alignment = 2
 clip_text = true
 
-[node name="NameValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 11
-text = "NameName"
-clip_text = true
-
-[node name="CpfLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+[node name="CpfLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/DisplayContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
 text = "CPF:"
-horizontal_alignment = 2
 clip_text = true
 
-[node name="CpfValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+[node name="CpfValue" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/DisplayContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
@@ -109,17 +91,22 @@ theme_override_font_sizes/font_size = 11
 text = "00000000000"
 clip_text = true
 
-[node name="TelephoneLabel" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+[node name="HSeparator5" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/DisplayContainer"]
+layout_mode = 2
+
+[node name="HSeparator6" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/DisplayContainer"]
+layout_mode = 2
+
+[node name="TelephoneLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/DisplayContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
 text = "Telefone:"
-horizontal_alignment = 2
 clip_text = true
 
-[node name="TelephoneValue" type="Label" parent="MarginContainer/VBoxContainer/DisplayContainer"]
+[node name="TelephoneValue" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/DisplayContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 11
@@ -128,7 +115,7 @@ theme_override_font_sizes/font_size = 11
 text = "55 88888888"
 clip_text = true
 
-[node name="EditContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+[node name="EditContainer" type="GridContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
@@ -138,15 +125,15 @@ theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 5
 columns = 2
 
-[node name="Padding" type="Control" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="Padding" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
 custom_minimum_size = Vector2(0, 15)
 layout_mode = 2
 
-[node name="Padding2" type="Control" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="Padding2" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
 custom_minimum_size = Vector2(0, 15)
 layout_mode = 2
 
-[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="NameLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_vertical = 0
@@ -155,7 +142,7 @@ text = "Nome:"
 horizontal_alignment = 1
 clip_text = true
 
-[node name="EditNameValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="EditNameValue" type="LineEdit" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
@@ -163,7 +150,7 @@ size_flags_horizontal = 3
 placeholder_text = "Nome"
 max_length = 64
 
-[node name="CpfLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="CpfLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_vertical = 0
@@ -172,7 +159,7 @@ text = "CPF:"
 horizontal_alignment = 1
 clip_text = true
 
-[node name="EditCpfValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="EditCpfValue" type="LineEdit" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
@@ -180,7 +167,7 @@ size_flags_horizontal = 3
 placeholder_text = "CPF"
 max_length = 64
 
-[node name="TelephoneLabel" type="Label" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="TelephoneLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_vertical = 0
@@ -189,7 +176,7 @@ text = "Telefone:"
 horizontal_alignment = 1
 clip_text = true
 
-[node name="EditTelephoneValue" type="LineEdit" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="EditTelephoneValue" type="LineEdit" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
@@ -197,29 +184,44 @@ size_flags_horizontal = 3
 placeholder_text = "Telefone"
 max_length = 64
 
-[node name="padding" type="Control" parent="MarginContainer/VBoxContainer/EditContainer"]
+[node name="padding" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
 layout_mode = 2
 
-[node name="SaveButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="SaveButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 text = "Save"
 
-[node name="CancelButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="CancelButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 text = "Cancel"
 
-[node name="EditButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="EditButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Editar"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/DeleteButton" to="." method="_on_delete_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/EditImageButton" to="." method="_on_edit_image_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/EditButton" to="." method="_on_edit_button_pressed"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="DeleteButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Deletar"
+
+[node name="CloseButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fechar"
+
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/EditImageButton" to="." method="_on_edit_image_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/EditButton" to="." method="_on_edit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/DeleteButton" to="." method="_on_delete_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
