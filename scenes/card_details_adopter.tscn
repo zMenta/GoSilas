@@ -139,7 +139,6 @@ layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
 text = "Nome:"
-horizontal_alignment = 1
 clip_text = true
 
 [node name="EditNameValue" type="LineEdit" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
@@ -156,7 +155,6 @@ layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
 text = "CPF:"
-horizontal_alignment = 1
 clip_text = true
 
 [node name="EditCpfValue" type="LineEdit" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
@@ -173,7 +171,6 @@ layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 11
 text = "Telefone:"
-horizontal_alignment = 1
 clip_text = true
 
 [node name="EditTelephoneValue" type="LineEdit" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
