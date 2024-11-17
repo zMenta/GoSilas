@@ -121,17 +121,8 @@ visible = false
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
-theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 5
+theme_override_constants/h_separation = -5
 columns = 2
-
-[node name="Padding" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
-custom_minimum_size = Vector2(0, 15)
-layout_mode = 2
-
-[node name="Padding2" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
-custom_minimum_size = Vector2(0, 15)
-layout_mode = 2
 
 [node name="NameLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
 custom_minimum_size = Vector2(80, 0)
@@ -149,6 +140,12 @@ size_flags_horizontal = 3
 placeholder_text = "Nome"
 max_length = 64
 
+[node name="HSeparator5" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
+[node name="HSeparator6" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
 [node name="CpfLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
@@ -164,6 +161,12 @@ layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "CPF"
 max_length = 64
+
+[node name="HSeparator7" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
+[node name="HSeparator8" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
 
 [node name="TelephoneLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
 custom_minimum_size = Vector2(80, 0)
