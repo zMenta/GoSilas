@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="Animal" load_steps=3 format=3 uid="uid://co1m5juekreyv"]
+[gd_resource type="Resource" script_class="Animal" load_steps=5 format=3 uid="uid://co1m5juekreyv"]
 
+[ext_resource type="Resource" uid="uid://b0s3hq2523an6" path="res://test_data/address1.tres" id="1_75wrl"]
+[ext_resource type="Resource" uid="uid://dqyjujvabmtdi" path="res://test_data/adopter1.tres" id="1_cueeh"]
 [ext_resource type="Texture2D" uid="uid://c70kgdtiq3sru" path="res://test_data/dog.jpg" id="1_isefl"]
 [ext_resource type="Script" path="res://resources/animal.gd" id="2_nh3vn"]
 
 [resource]
 script = ExtResource("2_nh3vn")
+adopter = ExtResource("1_cueeh")
+address = ExtResource("1_75wrl")
 name = "Carl"
 image = ExtResource("1_isefl")
 is_castrated = true
