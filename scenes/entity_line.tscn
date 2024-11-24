@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://11a6ka22rf1j"]
+
+[ext_resource type="Script" path="res://scripts/entity_line.gd" id="1_88k5t"]
+[ext_resource type="Resource" uid="uid://c124npf5gltp1" path="res://test_data/animal1.tres" id="2_rdrf7"]
+
+[node name="EntityLine" type="HBoxContainer"]
+script = ExtResource("1_88k5t")
+data = ExtResource("2_rdrf7")
+
+[node name="Label1" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Nome adotante"
+
+[node name="Label2" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Nome adotante"
+
+[node name="Label3" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Nome adotante"

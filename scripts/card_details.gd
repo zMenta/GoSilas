@@ -4,6 +4,7 @@ signal closed_button_pressed
 signal animal_deleted
 
 var file_dialog: FileDialog = null
+var entity_line: PackedScene = preload("res://scenes/entity_line.tscn")
 
 @onready var image_rect: TextureRect = %ImageRect
 @onready var edit_button: Button = %EditButton
@@ -26,6 +27,8 @@ var file_dialog: FileDialog = null
 @onready var edit_name_value: LineEdit = %EditNameValue
 @onready var edit_image_button : Button = %EditImageButton
 @onready var delete_button: Button = %DeleteButton
+@onready var adopter_container: VBoxContainer = %AdopterContainer
+@onready var address_container: VBoxContainer = %AddressContainer
 
 @export var data: Resource :
 	set(new_data):
@@ -58,6 +61,24 @@ func _set_values() -> void:
 	edit_character_option.selected = data.Character
 	edit_size_option.selected = data.Size
 	edit_health_value.text = data.health_state
+	_add_related_entities()
+
+
+func _add_related_entities() -> void:
+	for child in adopter_container.get_children():
+		child.queue_free()
+	for child in address_container.get_children():
+		child.queue_free()
+
+	if data.adopter != null:
+		var adopter_line: EntityLine = entity_line.instantiate()
+		adopter_container.add_child(adopter_line)
+		adopter_line.data = data.adopter
+
+	if data.address != null:
+		var address_line: EntityLine = entity_line.instantiate()
+		address_container.add_child(address_line)
+		address_line.data = data.address
 
 
 func _show_edit_menu() -> void:

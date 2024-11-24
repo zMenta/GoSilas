@@ -1,16 +1,14 @@
-[gd_resource type="Resource" script_class="Animal" load_steps=4 format=3 uid="uid://c124npf5gltp1"]
+[gd_resource type="Resource" script_class="Animal" load_steps=3 format=3 uid="uid://c32i01cxlvxmk"]
 
-[ext_resource type="Texture2D" uid="uid://c70kgdtiq3sru" path="res://test_data/dog.jpg" id="1_dcxuy"]
-[ext_resource type="Resource" uid="uid://dqyjujvabmtdi" path="res://test_data/adopter1.tres" id="1_ievcy"]
+[ext_resource type="Texture2D" uid="uid://c70kgdtiq3sru" path="res://test_data/dog.jpg" id="1_fmi27"]
 [ext_resource type="Script" path="res://resources/animal.gd" id="1_qkm4l"]
 
 [resource]
 script = ExtResource("1_qkm4l")
-adopter = ExtResource("1_ievcy")
 name = "Bob"
-image = ExtResource("1_dcxuy")
-is_castrated = false
+image = ExtResource("1_fmi27")
+is_castrated = true
 Sex = 0
-Size = 2
+Size = 1
 Character = 1
-health_state = "In good health"
+health_state = "Bom"
