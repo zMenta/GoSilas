@@ -31,3 +31,9 @@ func _set_mode() -> void:
 	else:
 		button_remove.hide()
 		button_insert.show()
+
+func _on_button_insert_pressed() -> void:
+	GlobalSignals.entity_picker_insert_button_pressed.emit(data)
+
+func _on_button_remove_pressed() -> void:
+	GlobalSignals.entity_picker_remove_button_pressed.emit(data)

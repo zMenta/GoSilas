@@ -13,6 +13,8 @@ enum SUB_ENTITY {adopter, animal, address}
 
 
 func _ready() -> void:
+	GlobalSignals.entity_picker_remove_button_pressed.connect(_on_card_remove_pressed)
+	GlobalSignals.entity_picker_insert_button_pressed.connect(_on_card_insert_pressed)
 	_setup()
 
 
@@ -34,13 +36,36 @@ func _setup() -> void:
 					card.data = adopter
 					entity_available_container.add_child(card)
 
-			var card_linked := entity_card.instantiate()
-			card_linked.data = target_entity.adopter
-			card_linked.is_remove_mode = true
-			entity_linked_container.add_child(card_linked)
-
+			if target_entity.adopter != null:
+				var card_linked := entity_card.instantiate()
+				card_linked.data = target_entity.adopter
+				card_linked.is_remove_mode = true
+				entity_linked_container.add_child(card_linked)
 
 		SUB_ENTITY.animal:
 			pass
 		SUB_ENTITY.address:
 			pass
+
+func _on_card_insert_pressed(data: Resource) -> void:
+	match target_sub_entity:
+		SUB_ENTITY.adopter:
+			target_entity.adopter = data
+			_setup()
+		SUB_ENTITY.animal:
+			target_entity.adopted_animals.append(data)
+			_setup()
+		SUB_ENTITY.address:
+			_setup()
+
+func _on_card_remove_pressed(data: Resource) -> void:
+	match target_sub_entity:
+		SUB_ENTITY.adopter:
+			target_entity.adopter = null
+			_setup()
+		SUB_ENTITY.animal:
+			target_entity.adopted_animals.erase(data)
+			_setup()
+		SUB_ENTITY.address:
+			target_entity.address = null
+			_setup()

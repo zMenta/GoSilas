@@ -40,15 +40,12 @@ layout_mode = 2
 
 [node name="EntityPickerCard" parent="MarginContainer/HBoxContainer/VBoxContainer/LinkedContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
-entity = null
 
 [node name="EntityPickerCard2" parent="MarginContainer/HBoxContainer/VBoxContainer/LinkedContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
-entity = null
 
 [node name="EntityPickerCard3" parent="MarginContainer/HBoxContainer/VBoxContainer/LinkedContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
-entity = null
 
 [node name="VSeparator" type="VSeparator" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -68,24 +65,18 @@ layout_mode = 2
 
 [node name="EntityPickerCard" parent="MarginContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
-entity = null
 
 [node name="EntityPickerCard2" parent="MarginContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
-entity = null
 
 [node name="EntityPickerCard3" parent="MarginContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
-entity = null
 
 [node name="EntityPickerCard4" parent="MarginContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
-entity = null
 
 [node name="EntityPickerCard5" parent="MarginContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
-entity = null
 
 [node name="EntityPickerCard6" parent="MarginContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
-entity = null
