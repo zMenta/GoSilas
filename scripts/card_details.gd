@@ -38,6 +38,8 @@ var entity_line: PackedScene = preload("res://scenes/entity_line.tscn")
 		if data != null:
 			_set_values.call_deferred()
 
+func _ready() -> void:
+	GlobalSignals.entity_picker_confirm_pressed.connect(_on_entity_picker_button_pressed)
 
 func _set_values() -> void:
 	# Display container
@@ -140,3 +142,13 @@ func _on_delete_button_pressed() -> void:
 	Storage.save_file.animals.erase(self.data)
 	closed_button_pressed.emit()
 	animal_deleted.emit()
+
+func _on_address_edit_button_pressed() -> void:
+	GlobalSignals.card_detail_edit_address_button_pressed.emit(data)
+
+func _on_adopter_edit_button_pressed() -> void:
+	GlobalSignals.card_detail_edit_adopter_button_pressed.emit(data)
+
+func _on_entity_picker_button_pressed() -> void:
+	_set_values()
+

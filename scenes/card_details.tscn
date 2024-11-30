@@ -423,6 +423,8 @@ size_flags_horizontal = 3
 text = "󰅚 Fechar"
 
 [connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/EditImageButton" to="." method="_on_edit_image_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Adopters/HBoxContainer/AdopterEditButton" to="." method="_on_adopter_edit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Addresses/HBoxContainer/AddressEditButton" to="." method="_on_address_edit_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/EditButton" to="." method="_on_edit_button_pressed"]

@@ -11,7 +11,6 @@ enum SUB_ENTITY {adopter, animal, address}
 @export var target_sub_entity: SUB_ENTITY
 @export var target_entity: Resource
 
-
 func _ready() -> void:
 	GlobalSignals.entity_picker_remove_button_pressed.connect(_on_card_remove_pressed)
 	GlobalSignals.entity_picker_insert_button_pressed.connect(_on_card_insert_pressed)
@@ -100,3 +99,6 @@ func _on_card_remove_pressed(data: Resource) -> void:
 		SUB_ENTITY.address:
 			target_entity.address = null
 			_setup()
+
+func _on_confirm_button_pressed() -> void:
+	GlobalSignals.entity_picker_confirm_pressed.emit()

@@ -27,6 +27,9 @@ func _ready() -> void:
 	details_card_animal.file_dialog = file_dialog
 	create_card.file_dialog = file_dialog
 	GlobalSignals.card_pressed.connect(_on_card_pressed)
+	GlobalSignals.card_detail_edit_adopter_button_pressed.connect(_on_card_edit_adopter)
+	GlobalSignals.card_detail_edit_address_button_pressed.connect(_on_card_edit_address)
+	GlobalSignals.entity_picker_confirm_pressed.connect(_on_entity_confirm_button_pressed)
 	_on_animal_button_pressed()
 
 func _check_dragger_visibility() -> void:
@@ -174,3 +177,18 @@ func _on_filter_button_pressed() -> void:
 				func(address: Address):
 					return address.city.containsn(filter_line_edit.text)
 					))
+
+func _on_card_edit_adopter(data: Resource) -> void:
+	entity_picker_menu.show()
+	entity_picker.target_entity = data
+	entity_picker.target_sub_entity = entity_picker.SUB_ENTITY.adopter
+	entity_picker._setup()
+
+func _on_card_edit_address(data: Resource) -> void:
+	entity_picker_menu.show()
+	entity_picker.target_entity = data
+	entity_picker.target_sub_entity = entity_picker.SUB_ENTITY.address
+	entity_picker._setup()
+
+func _on_entity_confirm_button_pressed() -> void:
+	entity_picker_menu.hide()

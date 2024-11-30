@@ -22,61 +22,78 @@ theme_override_constants/margin_bottom = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="EntityLinkedLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="EntityLinkedLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Entidade Vinculda"
 
-[node name="LinkedContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="LinkedContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="EntityPickerCard" parent="MarginContainer/HBoxContainer/VBoxContainer/LinkedContainer" instance=ExtResource("2_eop12")]
+[node name="EntityPickerCard" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/LinkedContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
 
-[node name="EntityPickerCard2" parent="MarginContainer/HBoxContainer/VBoxContainer/LinkedContainer" instance=ExtResource("2_eop12")]
+[node name="EntityPickerCard2" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/LinkedContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
 
-[node name="EntityPickerCard3" parent="MarginContainer/HBoxContainer/VBoxContainer/LinkedContainer" instance=ExtResource("2_eop12")]
+[node name="EntityPickerCard3" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/LinkedContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
 
-[node name="VSeparator" type="VSeparator" parent="MarginContainer/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="EntityAvailableLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+[node name="EntityAvailableLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Entidades"
 
-[node name="AvailableContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+[node name="AvailableContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="EntityPickerCard" parent="MarginContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
+[node name="EntityPickerCard" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
 
-[node name="EntityPickerCard2" parent="MarginContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
+[node name="EntityPickerCard2" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
 
-[node name="EntityPickerCard3" parent="MarginContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
+[node name="EntityPickerCard3" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
 
-[node name="EntityPickerCard4" parent="MarginContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
+[node name="EntityPickerCard4" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
 
-[node name="EntityPickerCard5" parent="MarginContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
+[node name="EntityPickerCard5" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
 
-[node name="EntityPickerCard6" parent="MarginContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
+[node name="EntityPickerCard6" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/AvailableContainer" instance=ExtResource("2_eop12")]
 layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ConfirmButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = " Confirmar"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/ConfirmButton" to="." method="_on_confirm_button_pressed"]
