@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c70kgdtiq3sru" path="res://test_data/dog.jpg" id="1_8s0ig"]
 [ext_resource type="Script" path="res://scripts/card.gd" id="1_du6u7"]
-[ext_resource type="Resource" uid="uid://c124npf5gltp1" path="res://test_data/animal1.tres" id="2_b26m1"]
+[ext_resource type="Resource" uid="uid://c32i01cxlvxmk" path="res://test_data/animal1.tres" id="2_b26m1"]
 
 [node name="Card" type="PanelContainer"]
 clip_contents = true

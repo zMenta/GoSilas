@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ctsprter837vf"]
 
 [ext_resource type="Script" path="res://scripts/card_details.gd" id="1_a2k7q"]
-[ext_resource type="Resource" uid="uid://b8xqtw6woq63s" path="res://test_data/animal3.tres" id="2_fto7c"]
+[ext_resource type="Resource" uid="uid://ceufndvup071n" path="res://test_data/animal3.tres" id="2_fto7c"]
 [ext_resource type="Texture2D" uid="uid://c70kgdtiq3sru" path="res://test_data/dog.jpg" id="3_rr0x2"]
 [ext_resource type="PackedScene" uid="uid://11a6ka22rf1j" path="res://scenes/entity_line.tscn" id="4_dlx37"]
 
@@ -56,7 +56,7 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Upload Image"
+text = " Carregar Imagem"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -348,7 +348,7 @@ size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Adopters"]
 layout_mode = 2
-text = "Adotante"
+text = " Adotante"
 
 [node name="AdopterContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Adopters"]
 unique_name_in_owner = true
@@ -364,7 +364,7 @@ size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Addresses"]
 layout_mode = 2
-text = "Endereço"
+text = "  Endereço"
 
 [node name="AddressContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Addresses"]
 unique_name_in_owner = true
@@ -375,18 +375,18 @@ size_flags_vertical = 3
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
-text = "Salvar"
+text = " Salvar"
 
 [node name="CancelButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
-text = "Cancelar"
+text = "󰜺 Cancelar"
 
 [node name="EditButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Editar
+text = " Editar
 "
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
@@ -397,12 +397,12 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Deletar"
+text = " Deletar"
 
 [node name="CloseButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Fechar"
+text = "󰅚 Fechar"
 
 [connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/EditImageButton" to="." method="_on_edit_image_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]

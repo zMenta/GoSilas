@@ -33,12 +33,12 @@ layout_mode = 2
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Arquivo"
+text = " Arquivo"
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Salvar"
+text = " Salvar"
 
 [node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
@@ -48,17 +48,17 @@ size_flags_stretch_ratio = 3.0
 [node name="AnimalButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Animais"
+text = " Animais"
 
 [node name="AdopterButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Adotantes"
+text = " Adotantes"
 
 [node name="AddressButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Endereços"
+text = " Endereços"
 
 [node name="Spacer2" type="Control" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
@@ -68,7 +68,7 @@ size_flags_stretch_ratio = 3.0
 [node name="Button5" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Opções"
+text = " Opções"
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -102,26 +102,26 @@ layout_mode = 2
 [node name="AddAnimal" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Adicionar Animal"
+text = " Adicionar Animal"
 
 [node name="AddAdopter" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
-text = "Adicionar Adotante"
+text = " Adicionar Adotante"
 
 [node name="AddAddress" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
-text = "Adicionar Endereço"
+text = " Adicionar Endereço"
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Filtrar"
+text = "󰈲 Filtrar"
 horizontal_alignment = 1
 
 [node name="FilterLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
@@ -132,12 +132,12 @@ placeholder_text = "Filtrar por nome"
 [node name="FilterButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Buscar"
+text = " Buscar"
 
 [node name="FilterClearButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Limpar Filtro
+text = "󱓯 Limpar Filtro
 "
 
 [node name="MainWindow" type="ScrollContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer"]
