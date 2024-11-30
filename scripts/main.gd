@@ -10,11 +10,13 @@ extends PanelContainer
 @onready var details_card_animal : PanelContainer = %CardDetails
 @onready var details_card_adopter: PanelContainer = %CardDetailsAdopter
 @onready var details_card_address: PanelContainer = %CardDetailsAdress
-# @onready var resource_picker : PopupPanel = %ResourcePickerMenu
 @onready var add_animal_button: Button = %AddAnimal
 @onready var add_adopter_button: Button = %AddAdopter
 @onready var add_address_button: Button = %AddAddress
 @onready var filter_line_edit: LineEdit = %FilterLineEdit
+
+@onready var entity_picker_menu: PopupPanel = %ResourcePickerMenu
+@onready var entity_picker := %EntityPicker
 
 enum CardEntities {animal, adopter, address}
 var current_card_entity: int = 0

@@ -346,9 +346,18 @@ max_length = 64
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Adopters"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Adopters"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Adopters/HBoxContainer"]
 layout_mode = 2
 text = " Adotante"
+
+[node name="AdopterEditButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Adopters/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = " Editar"
 
 [node name="AdopterContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Adopters"]
 unique_name_in_owner = true
@@ -362,9 +371,18 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Addresses"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Addresses"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Addresses/HBoxContainer"]
 layout_mode = 2
 text = "  Endereço"
+
+[node name="AddressEditButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Addresses/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = " Editar"
 
 [node name="AddressContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/Addresses"]
 unique_name_in_owner = true

@@ -29,6 +29,8 @@ var entity_line: PackedScene = preload("res://scenes/entity_line.tscn")
 @onready var delete_button: Button = %DeleteButton
 @onready var adopter_container: VBoxContainer = %AdopterContainer
 @onready var address_container: VBoxContainer = %AddressContainer
+@onready var adopter_edit_button: Button = %AdopterEditButton
+@onready var address_edit_button: Button = %AddressEditButton
 
 @export var data: Resource :
 	set(new_data):
@@ -89,6 +91,8 @@ func _show_edit_menu() -> void:
 	edit_button.hide()
 	edit_image_button.show()
 	delete_button.show()
+	adopter_edit_button.show()
+	address_edit_button.show()
 
 func _show_display_menu() -> void:
 	edit_container.hide()
@@ -98,6 +102,8 @@ func _show_display_menu() -> void:
 	save_button.hide()
 	edit_image_button.hide()
 	delete_button.hide()
+	adopter_edit_button.hide()
+	address_edit_button.hide()
 
 func _on_close_button_pressed() -> void:
 	closed_button_pressed.emit()
