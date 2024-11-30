@@ -32,6 +32,7 @@ layout_mode = 2
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+size_flags_horizontal = 10
 text = "-->"
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/ButtonInsert" to="." method="_on_button_insert_pressed"]

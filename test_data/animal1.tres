@@ -1,13 +1,11 @@
-[gd_resource type="Resource" script_class="Animal" load_steps=5 format=3 uid="uid://c32i01cxlvxmk"]
+[gd_resource type="Resource" script_class="Animal" load_steps=4 format=3 uid="uid://c32i01cxlvxmk"]
 
 [ext_resource type="Resource" uid="uid://bfe4s6m6gsqe5" path="res://test_data/address1.tres" id="1_313lj"]
 [ext_resource type="Texture2D" uid="uid://c70kgdtiq3sru" path="res://test_data/dog.jpg" id="1_fmi27"]
 [ext_resource type="Script" path="res://resources/animal.gd" id="1_qkm4l"]
-[ext_resource type="Resource" uid="uid://yuuogq77l63o" path="res://test_data/adopter1.tres" id="2_pej2p"]
 
 [resource]
 script = ExtResource("1_qkm4l")
-adopter = ExtResource("2_pej2p")
 address = ExtResource("1_313lj")
 name = "Bob"
 image = ExtResource("1_fmi27")

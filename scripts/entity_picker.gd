@@ -43,9 +43,39 @@ func _setup() -> void:
 				entity_linked_container.add_child(card_linked)
 
 		SUB_ENTITY.animal:
-			pass
+			entity_linked_label.text = "Animais Vinculados"
+			entity_available_label.text = "Animais"
+
+			target_entity = target_entity as Adopter
+			for animal: Animal in Storage.save_file.animals:
+				if !target_entity.adopted_animals.find(animal):
+					var card := entity_card.instantiate()
+					card.data = animal
+					entity_available_container.add_child(card)
+
+			for animal in target_entity.adopted_animals:
+				var card_linked := entity_card.instantiate()
+				card_linked.data = animal
+				card_linked.is_remove_mode = true
+				entity_linked_container.add_child(card_linked)
+
 		SUB_ENTITY.address:
-			pass
+			entity_linked_label.text = "Adotante Vinculado"
+			entity_available_label.text = "Adotantes"
+
+			target_entity = target_entity as Animal
+			for adopter: Adopter in Storage.save_file.adopter:
+				if adopter != target_entity.adopter:
+					var card := entity_card.instantiate()
+					card.data = adopter
+					entity_available_container.add_child(card)
+
+			if target_entity.adopter != null:
+				var card_linked := entity_card.instantiate()
+				card_linked.data = target_entity.adopter
+				card_linked.is_remove_mode = true
+				entity_linked_container.add_child(card_linked)
+
 
 func _on_card_insert_pressed(data: Resource) -> void:
 	match target_sub_entity:
