@@ -34,10 +34,10 @@ func _setup() -> void:
 					card.data = adopter
 					entity_available_container.add_child(card)
 
-				var card_linked := entity_card.instantiate()
-				card_linked.data = target_entity.adopter
-				card_linked.is_remove_mode = true
-				entity_linked_container.add_child(card_linked)
+			var card_linked := entity_card.instantiate()
+			card_linked.data = target_entity.adopter
+			card_linked.is_remove_mode = true
+			entity_linked_container.add_child(card_linked)
 
 
 		SUB_ENTITY.animal:

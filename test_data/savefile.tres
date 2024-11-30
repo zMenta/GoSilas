@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SaveFile" load_steps=11 format=3 uid="uid://0tt7q8mdhpai"]
+[gd_resource type="Resource" script_class="SaveFile" load_steps=13 format=3 uid="uid://0tt7q8mdhpai"]
 
 [ext_resource type="Script" path="res://resources/address.gd" id="1_lr8w4"]
 [ext_resource type="Resource" uid="uid://bfe4s6m6gsqe5" path="res://test_data/address1.tres" id="2_j8bfq"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://resources/adopter.gd" id="4_upbnb"]
 [ext_resource type="Resource" uid="uid://yuuogq77l63o" path="res://test_data/adopter1.tres" id="5_3gsjb"]
 [ext_resource type="Script" path="res://resources/animal.gd" id="6_1lino"]
+[ext_resource type="Resource" uid="uid://bfusjkrowrrsx" path="res://test_data/adopter2.tres" id="6_p4k3o"]
+[ext_resource type="Resource" uid="uid://6xekdnahih2k" path="res://test_data/adopter3.tres" id="7_lop3b"]
 [ext_resource type="Resource" uid="uid://c32i01cxlvxmk" path="res://test_data/animal1.tres" id="7_p4sqx"]
 [ext_resource type="Resource" uid="uid://ecntaxk6duu" path="res://test_data/animal2.tres" id="8_lp2a2"]
 [ext_resource type="Resource" uid="uid://ceufndvup071n" path="res://test_data/animal3.tres" id="9_yug11"]
@@ -15,4 +17,4 @@
 script = ExtResource("10_7oawb")
 animals = Array[ExtResource("6_1lino")]([ExtResource("7_p4sqx"), ExtResource("8_lp2a2"), ExtResource("9_yug11")])
 address = Array[ExtResource("1_lr8w4")]([ExtResource("2_j8bfq"), ExtResource("3_og23f")])
-adopter = Array[ExtResource("4_upbnb")]([ExtResource("5_3gsjb")])
+adopter = Array[ExtResource("4_upbnb")]([ExtResource("5_3gsjb"), ExtResource("6_p4k3o"), ExtResource("7_lop3b")])
