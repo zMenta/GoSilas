@@ -1,15 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://nv02mvdvgjxy"]
+[gd_scene load_steps=3 format=3 uid="uid://nv02mvdvgjxy"]
 
 [ext_resource type="PackedScene" uid="uid://11a6ka22rf1j" path="res://scenes/entity_line.tscn" id="1_20r1c"]
 [ext_resource type="Script" path="res://scripts/entity_picker_card.gd" id="1_rkyxd"]
-[ext_resource type="Resource" uid="uid://bfe4s6m6gsqe5" path="res://test_data/address1.tres" id="2_1ugax"]
 
 [node name="EntityPickerCard" type="PanelContainer"]
 offset_left = 1.0
 offset_right = 297.0
 offset_bottom = 40.0
 script = ExtResource("1_rkyxd")
-entity = ExtResource("2_1ugax")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2

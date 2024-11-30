@@ -9,16 +9,16 @@ extends PanelContainer
 		is_remove_mode = new_value
 		_set_mode()
 
-@export var entity: Resource:
+@export var data: Resource:
 	set(new_entity):
-		entity = new_entity
+		data = new_entity
 		if entity_line != null:
 			entity_line.data = new_entity
 
 
 func _ready() -> void:
 	_set_mode.call_deferred()
-	entity_line.data = entity
+	entity_line.data = self.data
 
 
 func _set_mode() -> void:
