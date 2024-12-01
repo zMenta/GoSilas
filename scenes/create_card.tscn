@@ -50,7 +50,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Carregar imagem"
+text = "  Carregar imagem"
 
 [node name="EditContainer" type="GridContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -198,12 +198,12 @@ max_length = 64
 [node name="SaveButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Adicionar"
+text = "  Adicionar"
 
 [node name="CancelButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Cancelar"
+text = "󰜺  Cancelar"
 
 [connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/EditImageButton" to="." method="_on_edit_image_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
