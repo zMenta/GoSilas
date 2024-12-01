@@ -1,6 +1,7 @@
 extends PanelContainer
 
 @onready var file_dialog: FileDialog = %FileDialog
+@onready var save_file_dialog: FileDialog = %OpenSaveFileDialog
 @onready var card_container : HFlowContainer = %CardContainer
 @onready var left_container : MarginContainer = %LeftContainer
 @onready var main_split_container : HSplitContainer = %MainSplitContainer
@@ -192,3 +193,18 @@ func _on_card_edit_address(data: Resource) -> void:
 
 func _on_entity_confirm_button_pressed() -> void:
 	entity_picker_menu.hide()
+
+
+func _on_save_button_pressed() -> void:
+	pass
+
+func _on_import_save_button_pressed() -> void:
+	save_file_dialog.show()
+
+
+func _on_open_save_file_dialog_file_selected(path:String) -> void:
+	var file := load(path)
+	if file is SaveFile:
+		Storage.save_file = load(path)
+		_on_animal_button_pressed()
+

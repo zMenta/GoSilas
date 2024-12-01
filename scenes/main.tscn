@@ -30,12 +30,14 @@ layout_mode = 2
 [node name="Header" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+[node name="ImportSaveButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-text = " Arquivo"
+text = " Importar"
 
-[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+[node name="SaveButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = " Salvar"
@@ -200,13 +202,32 @@ layout_mode = 2
 
 [node name="FileDialog" type="FileDialog" parent="."]
 unique_name_in_owner = true
-title = "Open a File"
+title = "Carregar Imagem"
 initial_position = 4
 size = Vector2i(800, 500)
 ok_button_text = "Open"
 file_mode = 0
 access = 2
 filters = PackedStringArray("*.png", "*.jpg", "*.jpeg")
+
+[node name="OpenSaveFileDialog" type="FileDialog" parent="."]
+unique_name_in_owner = true
+auto_translate_mode = 1
+title = "Importar Arquivo"
+initial_position = 4
+size = Vector2i(800, 500)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+
+[node name="SaveSaveFileDialog" type="FileDialog" parent="."]
+unique_name_in_owner = true
+auto_translate_mode = 1
+title = "Salvar Arquivo"
+initial_position = 4
+size = Vector2i(800, 500)
+ok_button_text = "Save"
+access = 2
 
 [node name="ResourcePickerMenu" type="PopupPanel" parent="."]
 unique_name_in_owner = true
@@ -221,9 +242,11 @@ always_on_top = true
 unique_name_in_owner = true
 offset_left = 4.0
 offset_top = 4.0
-offset_right = 600.0
+offset_right = 604.0
 offset_bottom = 396.0
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Header/ImportSaveButton" to="." method="_on_import_save_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Header/SaveButton" to="." method="_on_save_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Header/AnimalButton" to="." method="_on_animal_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Header/AdopterButton" to="." method="_on_adopter_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Header/AddressButton" to="." method="_on_address_button_pressed"]
@@ -246,3 +269,4 @@ offset_bottom = 396.0
 [connection signal="create_card_cancel_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCardAddress" to="." method="_on_create_card_create_card_cancel_pressed"]
 [connection signal="file_selected" from="FileDialog" to="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" method="_on_file_dialog_file_selected"]
 [connection signal="file_selected" from="FileDialog" to="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" method="_on_file_dialog_file_selected"]
+[connection signal="file_selected" from="OpenSaveFileDialog" to="." method="_on_open_save_file_dialog_file_selected"]
