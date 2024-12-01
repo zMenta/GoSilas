@@ -225,6 +225,7 @@ size = Vector2i(800, 500)
 ok_button_text = "Open"
 file_mode = 0
 access = 2
+filters = PackedStringArray("*.tres")
 
 [node name="SaveSaveFileDialog" type="FileDialog" parent="."]
 unique_name_in_owner = true
@@ -234,6 +235,16 @@ initial_position = 4
 size = Vector2i(800, 500)
 ok_button_text = "Save"
 access = 2
+filters = PackedStringArray("*.tres")
+
+[node name="SaveSaveFileDialog" type="FileDialog" parent="SaveSaveFileDialog"]
+auto_translate_mode = 1
+title = "Salvar Arquivo"
+initial_position = 4
+size = Vector2i(800, 500)
+ok_button_text = "Save"
+access = 2
+filters = PackedStringArray("*.tres")
 
 [node name="ResourcePickerMenu" type="PopupPanel" parent="."]
 unique_name_in_owner = true
@@ -277,3 +288,5 @@ offset_bottom = 396.0
 [connection signal="file_selected" from="FileDialog" to="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" method="_on_file_dialog_file_selected"]
 [connection signal="file_selected" from="FileDialog" to="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" method="_on_file_dialog_file_selected"]
 [connection signal="file_selected" from="OpenSaveFileDialog" to="." method="_on_open_save_file_dialog_file_selected"]
+[connection signal="file_selected" from="SaveSaveFileDialog" to="." method="_on_save_save_file_dialog_file_selected"]
+[connection signal="file_selected" from="SaveSaveFileDialog/SaveSaveFileDialog" to="." method="_on_save_save_file_dialog_file_selected"]
