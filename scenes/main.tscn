@@ -30,6 +30,12 @@ layout_mode = 2
 [node name="Header" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
+[node name="NewSaveButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = " Novo Arquivo"
+
 [node name="ImportSaveButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -104,19 +110,19 @@ layout_mode = 2
 [node name="AddAnimal" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = " Adicionar Animal"
+text = " Adicionar Animal"
 
 [node name="AddAdopter" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
-text = " Adicionar Adotante"
+text = " Adicionar Adotante"
 
 [node name="AddAddress" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
-text = " Adicionar Endereço"
+text = " Adicionar Endereço"
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -202,7 +208,7 @@ layout_mode = 2
 
 [node name="FileDialog" type="FileDialog" parent="."]
 unique_name_in_owner = true
-title = "Carregar Imagem"
+title = "Open a File"
 initial_position = 4
 size = Vector2i(800, 500)
 ok_button_text = "Open"
@@ -213,7 +219,7 @@ filters = PackedStringArray("*.png", "*.jpg", "*.jpeg")
 [node name="OpenSaveFileDialog" type="FileDialog" parent="."]
 unique_name_in_owner = true
 auto_translate_mode = 1
-title = "Importar Arquivo"
+title = "Open a File"
 initial_position = 4
 size = Vector2i(800, 500)
 ok_button_text = "Open"
@@ -245,6 +251,7 @@ offset_top = 4.0
 offset_right = 604.0
 offset_bottom = 396.0
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Header/NewSaveButton" to="." method="_on_new_save_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Header/ImportSaveButton" to="." method="_on_import_save_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Header/SaveButton" to="." method="_on_save_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Header/AnimalButton" to="." method="_on_animal_button_pressed"]

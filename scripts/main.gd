@@ -208,3 +208,6 @@ func _on_open_save_file_dialog_file_selected(path:String) -> void:
 		Storage.save_file = load(path)
 		_on_animal_button_pressed()
 
+func _on_new_save_button_pressed() -> void:
+	Storage.save_file = SaveFile.new()
+	_on_animal_button_pressed()
