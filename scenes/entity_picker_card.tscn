@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://nv02mvdvgjxy"]
+
+[ext_resource type="PackedScene" uid="uid://11a6ka22rf1j" path="res://scenes/entity_line.tscn" id="1_20r1c"]
+[ext_resource type="Script" path="res://scripts/entity_picker_card.gd" id="1_rkyxd"]
+
+[node name="EntityPickerCard" type="PanelContainer"]
+offset_left = 1.0
+offset_right = 297.0
+offset_bottom = 40.0
+script = ExtResource("1_rkyxd")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ButtonInsert" type="Button" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = ""
+
+[node name="EntityLine" parent="MarginContainer/HBoxContainer" instance=ExtResource("1_20r1c")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ButtonRemove" type="Button" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 10
+text = ""
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ButtonInsert" to="." method="_on_button_insert_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ButtonRemove" to="." method="_on_button_remove_pressed"]

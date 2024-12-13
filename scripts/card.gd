@@ -17,6 +17,7 @@ func _ready() -> void:
 
 func _set_values() -> void:
 	if data is Animal:
+		texture_rect.show()
 		texture_rect.texture = data.image
 		name_label.text = data.name
 		match data.Sex:
@@ -28,14 +29,15 @@ func _set_values() -> void:
 			2: size_label.text = "Big"
 			3: size_label.text = "Extra Big"
 	elif data is Adopter:
+		texture_rect.hide()
 		name_label.text = data.name
 		sex_label.text = data.telephone_number
 		size_label.text = ""
 	elif data is Address:
+		texture_rect.hide()
 		name_label.text = data.city
 		sex_label.text = data.street_name
 		size_label.text = str(data.street_number)
-
 
 
 func _input(event: InputEvent) -> void:

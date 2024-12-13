@@ -2,14 +2,12 @@
 ## Current tasks 
 - Add a UI Style
 - On Animal resource, add a limit to health string length
-- Create a UI to select available adopters/addresses/animals (card creation or edit)
 - Add image compression (limit to a value) on image uploads
-- Add the ability to filter the content
-- Add the ability to delete resources (animals, adopters and addresses)
 - Add pages for the UI
 
+
 ## Doing
-- Add the menus for adopters and addresses
+- Save save files
 
 ## Completed
 - Basic UML | Flowchart [2024.09.23]
@@ -19,7 +17,16 @@
 - Finish the base UI from initial mock-up [2024.10.6]
 - Add a "add card" menu (edit, add, etc abilities) [2024.10.13]
 - Add ability to upload images from computer file system [2024.10.19]
-
+- Add the menus for adopters and addresses [2024.10.20]
+- Make the texts in Portuguese [2024.10.26]
+- Create a UI to select available adopters/addresses/animals (card creation or edit) [2024.10.28]
+- Add a "create" and "details" menu for adopters and addresses. [2024.10.28]
+- Add the ability to delete resources (animals, adopters and addresses) [2024.11.15]
+- Add the ability to filter the content [2024.11.16]
+- Refactory, adjust the card details layout
+- Add Details cards with related entities field (related Animals, Adopters, Addresses)
+- Add a menu to edit entities relationship
+- Import save files
 
 # Planning
 ## Version 1

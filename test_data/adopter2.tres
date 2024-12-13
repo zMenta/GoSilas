@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Adopter" load_steps=4 format=3 uid="uid://bfusjkrowrrsx"]
+
+[ext_resource type="Resource" uid="uid://bfe4s6m6gsqe5" path="res://test_data/address1.tres" id="1_e04c0"]
+[ext_resource type="Script" path="res://resources/animal.gd" id="2_m5uoq"]
+[ext_resource type="Script" path="res://resources/adopter.gd" id="3_vj556"]
+
+[resource]
+script = ExtResource("3_vj556")
+address = ExtResource("1_e04c0")
+adopted_animals = Array[ExtResource("2_m5uoq")]([])
+name = "Bobinson"
+cpf = "555.555.555.99"
+telephone_number = "999999999"

@@ -25,8 +25,3 @@ class_name Adopter
 	set(new_value):
 		telephone_number = new_value
 		emit_changed()
-
-@export var observations: String:
-	set(new_value):
-		observations = new_value
-		emit_changed()
