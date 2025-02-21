@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Animal" load_steps=5 format=3 uid="uid://ecntaxk6duu"]
+
+[ext_resource type="Resource" uid="uid://bfe4s6m6gsqe5" path="res://test_data/address1.tres" id="1_2u348"]
+[ext_resource type="Resource" uid="uid://yuuogq77l63o" path="res://test_data/adopter1.tres" id="1_c1kfk"]
+[ext_resource type="Texture2D" uid="uid://c70kgdtiq3sru" path="res://test_data/dog.jpg" id="1_w082y"]
+[ext_resource type="Script" path="res://resources/animal.gd" id="2_nh3vn"]
+
+[resource]
+script = ExtResource("2_nh3vn")
+adopter = ExtResource("1_c1kfk")
+address = ExtResource("1_2u348")
+name = "Tsuka"
+image = ExtResource("1_w082y")
+is_castrated = false
+Sex = 1
+Size = 0
+Character = 0
+health_state = ""

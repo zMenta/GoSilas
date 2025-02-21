@@ -11,8 +11,34 @@ config_version=5
 [application]
 
 config/name="GoSilas"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Storage="*res://autoloaders/storage.gd"
+GlobalSignals="*res://autoloaders/global_signals.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[file_customization]
+
+folder_colors={
+"res://autoloaders/": "pink",
+"res://resources/": "purple",
+"res://scenes/": "orange",
+"res://scripts/": "green",
+"res://test_data/": "gray",
+"res://themes/": "blue"
+}
+
+[gui]
+
+theme/custom="res://themes/DefaultTheme.tres"
 
 [rendering]
 

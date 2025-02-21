@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bq6uif87x4fc8"]
+
+[ext_resource type="StyleBox" uid="uid://cr5t6yfxg6yax" path="res://themes/styles/hseparatorStyle.tres" id="1_r3a8c"]
+
+[resource]
+HSeparator/constants/separation = 4
+HSeparator/styles/separator = ExtResource("1_r3a8c")

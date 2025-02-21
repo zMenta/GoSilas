@@ -1,0 +1,292 @@
+[gd_scene load_steps=9 format=3 uid="uid://dt8c6mponrxif"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_sb6f2"]
+[ext_resource type="PackedScene" uid="uid://ctsprter837vf" path="res://scenes/card_details.tscn" id="2_lw0p6"]
+[ext_resource type="PackedScene" uid="uid://bljsuwvjv1n35" path="res://scenes/create_card.tscn" id="3_3swga"]
+[ext_resource type="PackedScene" uid="uid://dysryegjf8kl6" path="res://scenes/card_details_adopter.tscn" id="4_0fn0x"]
+[ext_resource type="PackedScene" uid="uid://b83cjx1jkrbct" path="res://scenes/create_card_adopter.tscn" id="5_2vnid"]
+[ext_resource type="PackedScene" uid="uid://dw1i620q5rg3f" path="res://scenes/card_details_adress.tscn" id="6_0536k"]
+[ext_resource type="PackedScene" uid="uid://ceul87fbusy4d" path="res://scenes/create_card_address.tscn" id="7_dsjvw"]
+[ext_resource type="PackedScene" uid="uid://ctqbp7ptwxhnu" path="res://scenes/entity_picker.tscn" id="8_e1tpp"]
+
+[node name="Main" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sb6f2")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="NewSaveButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = " Novo Arquivo"
+
+[node name="ImportSaveButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = " Importar"
+
+[node name="SaveButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = " Salvar"
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="AnimalButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " Animais"
+
+[node name="AdopterButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " Adotantes"
+
+[node name="AddressButton" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " Endereços"
+
+[node name="Spacer2" type="Control" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="Button5" type="Button" parent="MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " Opções"
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MainSplitContainer" type="HSplitContainer" parent="MarginContainer/VBoxContainer/PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+dragger_visibility = 2
+
+[node name="CardContainer" type="HSplitContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+dragger_visibility = 2
+
+[node name="RightContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="AddAnimal" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = " Adicionar Animal"
+
+[node name="AddAdopter" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = " Adicionar Adotante"
+
+[node name="AddAddress" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = " Adicionar Endereço"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "󰈲 Filtrar"
+horizontal_alignment = 1
+
+[node name="FilterLineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Filtrar por nome"
+
+[node name="FilterButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " Buscar"
+
+[node name="FilterClearButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "󱓯 Limpar Filtro
+"
+
+[node name="MainWindow" type="ScrollContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="CardContainer" type="HFlowContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/MainWindow/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LeftContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CardDetails" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("2_lw0p6")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CreateCard" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("3_3swga")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="CardDetailsAdopter" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("4_0fn0x")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="CreateCardAdopter" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("5_2vnid")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="CardDetailsAdress" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("6_0536k")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="CreateCardAddress" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer" instance=ExtResource("7_dsjvw")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer"]
+layout_mode = 2
+
+[node name="FileDialog" type="FileDialog" parent="."]
+unique_name_in_owner = true
+title = "Open a File"
+initial_position = 4
+size = Vector2i(800, 500)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png", "*.jpg", "*.jpeg")
+
+[node name="OpenSaveFileDialog" type="FileDialog" parent="."]
+unique_name_in_owner = true
+auto_translate_mode = 1
+title = "Open a File"
+initial_position = 4
+size = Vector2i(800, 500)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.tres")
+
+[node name="SaveSaveFileDialog" type="FileDialog" parent="."]
+unique_name_in_owner = true
+auto_translate_mode = 1
+title = "Salvar Arquivo"
+initial_position = 4
+size = Vector2i(800, 500)
+ok_button_text = "Save"
+access = 2
+filters = PackedStringArray("*.tres")
+
+[node name="SaveSaveFileDialog" type="FileDialog" parent="SaveSaveFileDialog"]
+auto_translate_mode = 1
+title = "Salvar Arquivo"
+initial_position = 4
+size = Vector2i(800, 500)
+ok_button_text = "Save"
+access = 2
+filters = PackedStringArray("*.tres")
+
+[node name="ResourcePickerMenu" type="PopupPanel" parent="."]
+unique_name_in_owner = true
+auto_translate_mode = 1
+title = "PickerMenu"
+initial_position = 4
+size = Vector2i(604, 400)
+borderless = false
+always_on_top = true
+
+[node name="EntityPicker" parent="ResourcePickerMenu" instance=ExtResource("8_e1tpp")]
+unique_name_in_owner = true
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 604.0
+offset_bottom = 396.0
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Header/NewSaveButton" to="." method="_on_new_save_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Header/ImportSaveButton" to="." method="_on_import_save_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Header/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Header/AnimalButton" to="." method="_on_animal_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Header/AdopterButton" to="." method="_on_adopter_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Header/AddressButton" to="." method="_on_address_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/AddAnimal" to="." method="_on_add_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/AddAdopter" to="." method="_on_add_adopter_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/AddAddress" to="." method="_on_add_address_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/FilterButton" to="." method="_on_filter_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/CardContainer/RightContainer/MarginContainer/VBoxContainer/FilterClearButton" to="." method="_on_filter_clear_button_pressed"]
+[connection signal="animal_deleted" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" to="." method="_on_card_details_animal_deleted"]
+[connection signal="closed_button_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" to="." method="_on_card_details_closed_button_pressed"]
+[connection signal="animal_created" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" to="." method="_on_create_card_created"]
+[connection signal="create_card_cancel_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" to="." method="_on_create_card_create_card_cancel_pressed"]
+[connection signal="adopter_deleted" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetailsAdopter" to="." method="_on_card_details_adopter_adopter_deleted"]
+[connection signal="closed_button_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetailsAdopter" to="." method="_on_card_details_closed_button_pressed"]
+[connection signal="adopter_created" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCardAdopter" to="." method="_on_create_card_created"]
+[connection signal="create_card_cancel_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCardAdopter" to="." method="_on_create_card_create_card_cancel_pressed"]
+[connection signal="address_deleted" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetailsAdress" to="." method="_on_card_details_adress_address_deleted"]
+[connection signal="closed_button_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetailsAdress" to="." method="_on_card_details_closed_button_pressed"]
+[connection signal="address_created" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCardAddress" to="." method="_on_create_card_created"]
+[connection signal="create_card_cancel_pressed" from="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCardAddress" to="." method="_on_create_card_create_card_cancel_pressed"]
+[connection signal="file_selected" from="FileDialog" to="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CardDetails" method="_on_file_dialog_file_selected"]
+[connection signal="file_selected" from="FileDialog" to="MarginContainer/VBoxContainer/PanelContainer/MainSplitContainer/LeftContainer/CreateCard" method="_on_file_dialog_file_selected"]
+[connection signal="file_selected" from="OpenSaveFileDialog" to="." method="_on_open_save_file_dialog_file_selected"]
+[connection signal="file_selected" from="SaveSaveFileDialog" to="." method="_on_save_save_file_dialog_file_selected"]
+[connection signal="file_selected" from="SaveSaveFileDialog/SaveSaveFileDialog" to="." method="_on_save_save_file_dialog_file_selected"]

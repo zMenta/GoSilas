@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SaveFile" load_steps=8 format=3 uid="uid://bhy53d3o2kki7"]
+
+[ext_resource type="Script" path="res://resources/address.gd" id="1_cy2qk"]
+[ext_resource type="Resource" uid="uid://byrs86t7mjk3r" path="res://test_data/address2.tres" id="3_a7vys"]
+[ext_resource type="Script" path="res://resources/adopter.gd" id="4_qskk8"]
+[ext_resource type="Script" path="res://resources/animal.gd" id="8_45ia2"]
+[ext_resource type="Resource" uid="uid://c32i01cxlvxmk" path="res://test_data/animal1.tres" id="9_d72tl"]
+[ext_resource type="Resource" uid="uid://ceufndvup071n" path="res://test_data/animal3.tres" id="11_tt734"]
+[ext_resource type="Script" path="res://resources/save_file.gd" id="12_byytt"]
+
+[resource]
+script = ExtResource("12_byytt")
+animals = Array[ExtResource("8_45ia2")]([ExtResource("9_d72tl"), ExtResource("11_tt734")])
+address = Array[ExtResource("1_cy2qk")]([ExtResource("3_a7vys")])
+adopter = Array[ExtResource("4_qskk8")]([])

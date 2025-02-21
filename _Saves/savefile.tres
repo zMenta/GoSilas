@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SaveFile" load_steps=13 format=3 uid="uid://cjo7hmf6xqdm1"]
+
+[ext_resource type="Script" path="res://resources/address.gd" id="1_ifs45"]
+[ext_resource type="Resource" uid="uid://bfe4s6m6gsqe5" path="res://test_data/address1.tres" id="2_sy6ep"]
+[ext_resource type="Resource" uid="uid://byrs86t7mjk3r" path="res://test_data/address2.tres" id="3_3aacm"]
+[ext_resource type="Script" path="res://resources/adopter.gd" id="4_5kb5d"]
+[ext_resource type="Resource" uid="uid://yuuogq77l63o" path="res://test_data/adopter1.tres" id="5_u1he1"]
+[ext_resource type="Resource" uid="uid://bfusjkrowrrsx" path="res://test_data/adopter2.tres" id="6_unlg4"]
+[ext_resource type="Resource" uid="uid://6xekdnahih2k" path="res://test_data/adopter3.tres" id="7_stq3x"]
+[ext_resource type="Script" path="res://resources/animal.gd" id="8_3fic0"]
+[ext_resource type="Resource" uid="uid://c32i01cxlvxmk" path="res://test_data/animal1.tres" id="9_1g40s"]
+[ext_resource type="Resource" uid="uid://ecntaxk6duu" path="res://test_data/animal2.tres" id="10_a6ach"]
+[ext_resource type="Resource" uid="uid://ceufndvup071n" path="res://test_data/animal3.tres" id="11_eambc"]
+[ext_resource type="Script" path="res://resources/save_file.gd" id="12_wcnuw"]
+
+[resource]
+script = ExtResource("12_wcnuw")
+animals = Array[ExtResource("8_3fic0")]([ExtResource("9_1g40s"), ExtResource("10_a6ach"), ExtResource("11_eambc")])
+address = Array[ExtResource("1_ifs45")]([ExtResource("2_sy6ep"), ExtResource("3_3aacm")])
+adopter = Array[ExtResource("4_5kb5d")]([ExtResource("5_u1he1"), ExtResource("6_unlg4"), ExtResource("7_stq3x")])

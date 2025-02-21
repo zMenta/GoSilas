@@ -1,0 +1,210 @@
+[gd_scene load_steps=2 format=3 uid="uid://bljsuwvjv1n35"]
+
+[ext_resource type="Script" path="res://scripts/create_card.gd" id="1_6do2g"]
+
+[node name="CreateCard" type="PanelContainer"]
+offset_left = 17.0
+offset_top = 25.0
+offset_right = 366.0
+offset_bottom = 621.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_6do2g")
+metadata/_edit_vertical_guides_ = [98.0]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="NameLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 18
+text = "Novo Animal"
+clip_text = true
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 5
+stretch_mode = 5
+
+[node name="EditImageButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "  Carregar imagem"
+
+[node name="EditContainer" type="GridContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/h_separation = -1
+columns = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Nome:"
+clip_text = true
+
+[node name="EditNameValue" type="LineEdit" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Nome"
+max_length = 64
+
+[node name="HSeparator5" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
+[node name="HSeparator6" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
+[node name="IsCastratedLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Castrado:"
+clip_text = true
+
+[node name="EditIsCastratedCheckBox" type="CheckBox" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator7" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
+[node name="HSeparator8" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
+[node name="SexLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Sexo:"
+clip_text = true
+
+[node name="EditSexOption" type="OptionButton" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 2
+popup/item_0/text = "Masculino"
+popup/item_1/text = "Feminino"
+popup/item_1/id = 1
+
+[node name="HSeparator9" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
+[node name="HSeparator10" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
+[node name="SizeLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Tamanho:"
+clip_text = true
+
+[node name="EditSizeOption" type="OptionButton" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 4
+popup/item_0/text = "Pequeno"
+popup/item_1/text = "Médio"
+popup/item_1/id = 1
+popup/item_2/text = "Grande"
+popup/item_2/id = 2
+popup/item_3/text = "Extra Grande"
+popup/item_3/id = 3
+
+[node name="HSeparator11" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
+[node name="HSeparator12" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
+[node name="CharacterLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Personalidade:"
+clip_text = true
+
+[node name="EditCharacterOption" type="OptionButton" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 2
+popup/item_0/text = "Amigável"
+popup/item_1/text = "Agressivo"
+popup/item_1/id = 1
+
+[node name="HSeparator13" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
+[node name="HSeparator14" type="HSeparator" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+layout_mode = 2
+
+[node name="HealthLabel" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "Observações:"
+clip_text = true
+
+[node name="EditHealthValue" type="LineEdit" parent="MarginContainer/MarginContainer/VBoxContainer/EditContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Observações"
+max_length = 64
+
+[node name="SaveButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "  Adicionar"
+
+[node name="CancelButton" type="Button" parent="MarginContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "󰜺  Cancelar"
+
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/EditImageButton" to="." method="_on_edit_image_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/VBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]

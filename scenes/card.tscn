@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk2ebyjp53c1"]
+
+[ext_resource type="Texture2D" uid="uid://c70kgdtiq3sru" path="res://test_data/dog.jpg" id="1_8s0ig"]
+[ext_resource type="Script" path="res://scripts/card.gd" id="1_du6u7"]
+[ext_resource type="Resource" uid="uid://c32i01cxlvxmk" path="res://test_data/animal1.tres" id="2_b26m1"]
+
+[node name="Card" type="PanelContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(120, 150)
+offset_right = 45.0
+offset_bottom = 109.0
+script = ExtResource("1_du6u7")
+data = ExtResource("2_b26m1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_8s0ig")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Name"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="SexLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Sex"
+horizontal_alignment = 1
+clip_text = true
+
+[node name="SizeLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Size"
+horizontal_alignment = 1
+clip_text = true
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Adopter" load_steps=4 format=3 uid="uid://yuuogq77l63o"]
+
+[ext_resource type="Script" path="res://resources/animal.gd" id="1_2v60k"]
+[ext_resource type="Resource" uid="uid://bfe4s6m6gsqe5" path="res://test_data/address1.tres" id="1_alqdk"]
+[ext_resource type="Script" path="res://resources/adopter.gd" id="2_wxhns"]
+
+[resource]
+script = ExtResource("2_wxhns")
+address = ExtResource("1_alqdk")
+adopted_animals = Array[ExtResource("1_2v60k")]([])
+name = "Carl"
+cpf = "555.555.555.99"
+telephone_number = "999999999"
